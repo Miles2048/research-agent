@@ -1,0 +1,33 @@
+{
+  "user_id": "23",
+  "artifact_id": 38,
+  "artifacts_type": "T1",
+  "artifact_task_id": "string",
+  "task_type": "masterflow",
+  "company": {
+    "company_id": "3",
+    "company_data": "string"
+  },
+  "task_config": {
+    "user_intl_prefs": [
+      {
+        "label": "string",
+        "options": [
+          "string"
+        ]
+      }
+    ]
+  },
+  "product": {
+    "tech_specs": {
+      "additionalProp1": {}
+    },
+    "product_sku": {
+      "additionalProp1": {}
+    }
+  },
+  "callback_url": "string",
+  "_saved_at": "2025-08-21T12:59:20.681035",
+  "_request_path": "/api/research/task",
+  "_task_type": "masterflow"
+}
