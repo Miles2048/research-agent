@@ -3,8 +3,8 @@
 ## 基本信息
 - **标题**: Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx
 - **URL**: https://www.who.int/docs/default-source/medical-devices/technical-specs-ppe-covid19.pdf
-- **创建时间**: 2025-08-22 02:08:33
-- **更新时间**: 2025-08-22 02:08:33
+- **创建时间**: 2025-08-22 03:19:28
+- **更新时间**: 2025-08-22 03:19:28
 
 ## 评估信息
 - **资源类型**: official_statistics
@@ -12,7 +12,7 @@
 - **相关性**: 65%
 
 ## AI摘要
-The document titled "COVID-19 Technical Specifications for Personal Protective Equipment and Related IPC Supplies" by WHO outlines the essential technical characteristics of personal protective equipment (PPE) necessary for infection prevention and control (IPC) during the COVID-19 pandemic. It emphasizes that the appropriate clinical use of these devices should be determined by IPC guidelines and medical professionals. The publication also details the minimum requirements for PPE to ensure effectiveness in protecting healthcare workers and the public against COVID-19.
+The document titled "COVID-19 Technical Specifications for Personal Protective Equipment and Related IPC Supplies" outlines the essential technical characteristics of personal protective equipment (PPE) relevant to COVID-19. It emphasizes that the selection and clinical use of these devices should be guided by infection prevention and control (IPC) protocols and medical personnel. The publication also establishes minimum requirements for PPE products to ensure their effectiveness in protecting against COVID-19.
 
 ## 内容
 WHO/2020-nCoV/MedDev/TS/InfDev 7 August 2020 

@@ -323,7 +323,7 @@ class RemoteDataPusher:
         
         # 简化日志，不再显示每次更新状态的信息
     
-    def push_all(self, batch_size: int = 100, max_retries: int = 2):
+    def push_all(self, batch_size: int = 100, max_retries: int = 10):
         """
         推送所有未推送的记录（一条条推送，失败就跳过）
         

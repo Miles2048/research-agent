@@ -3,8 +3,8 @@
 ## 基本信息
 - **标题**: Water Systems Certification | IAPMO R&T
 - **URL**: https://iapmort.org/certification-services/water-systems-certification
-- **创建时间**: 2025-08-22 01:28:28
-- **更新时间**: 2025-08-22 01:28:28
+- **创建时间**: 2025-08-22 03:19:28
+- **更新时间**: 2025-08-22 03:19:28
 
 ## 评估信息
 - **资源类型**: business_data
@@ -12,7 +12,7 @@
 - **相关性**: 85%
 
 ## AI摘要
-The IAPMO Water Systems Certification Program aims to assure regulators, inspectors, manufacturers, distributors, installers, engineers, and the public of the reliability and safety of water system products. By providing thorough testing and certification, the program enhances confidence in the quality of these products, ensuring they meet established standards. For more information, resources, and contact details, visit the IAPMO website.
+The IAPMO Water Systems Certification Program aims to assure regulators, inspectors, manufacturers, distributors, installers, engineers, and the public of the quality and safety of water system products. Through rigorous testing and certification, the program enhances confidence in these products, ensuring they meet established standards. For more information, resources are available on the IAPMO website, including contact details and links to related initiatives.
 
 ## 内容
 [Jump to content](https://iapmort.org/iapmort.org#content)

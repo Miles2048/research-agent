@@ -352,37 +352,38 @@ class TopicReportPerplexityGenerator:
     def _post_process_report(self, content: str, topic_id: str) -> str:
         """后处理报告内容"""
         
-        # 添加元数据头部
-        metadata_header = f"""---
-title: Perplexity Research Report - {topic_id}
-generated_by: Topic Report Perplexity Generator
-model: {self.model}
-generated_at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-topic_id: {topic_id}
----
-
-"""
+        # 添加元数据头部 - 已注释掉
+        # metadata_header = f"""---
+# title: Perplexity Research Report - {topic_id}
+# generated_by: Topic Report Perplexity Generator
+# model: {self.model}
+# generated_at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+# topic_id: {topic_id}
+# ---
+# 
+# """
         
         # 确保内容以标题开始
         if not content.strip().startswith('#'):
             topic_title = topic_id.replace('_', ' ').title()
             content = f"# {topic_title} 深度研究报告\n\n{content}"
         
-        # 添加生成信息脚注
-        footer = f"""
-
----
-
-**报告生成信息**
-- 生成时间: {datetime.now().strftime('%Y年%m月%d日 %H:%M:%S')}
-- 生成系统: Topic Report Perplexity Generator
-- AI模型: {self.model}
-- Topic ID: {topic_id}
-
-*本报告由Perplexity AI自动生成，包含实时搜索和验证的信息*
-"""
+        # 添加生成信息脚注 - 已注释掉
+        # footer = f"""
+# 
+# ---
+# 
+# **报告生成信息**
+# - 生成时间: {datetime.now().strftime('%Y年%m月%d日 %H:%M:%S')}
+# - 生成系统: Topic Report Perplexity Generator
+# - AI模型: {self.model}
+# - Topic ID: {topic_id}
+# 
+# *本报告由Perplexity AI自动生成，包含实时搜索和验证的信息*
+# """
         
-        return metadata_header + content + footer
+        # 只返回内容，不添加元数据和脚注
+        return content
     
     def _save_report(self, topic_id: str, content: str) -> str:
         """保存报告到文件"""
