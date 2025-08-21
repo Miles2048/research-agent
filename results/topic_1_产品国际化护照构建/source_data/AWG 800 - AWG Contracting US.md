@@ -3,16 +3,16 @@
 ## 基本信息
 - **标题**: AWG 800 - AWG Contracting US
 - **URL**: https://awgcontractingus.com/product/awg-800/
-- **创建时间**: 2025-08-21 22:25:34
-- **更新时间**: 2025-08-21 22:25:34
+- **创建时间**: 2025-08-22 01:12:16
+- **更新时间**: 2025-08-22 01:12:16
 
 ## 评估信息
-- **资源类型**: character_varying
-- **可信度**: 3
+- **资源类型**: business_data
+- **可信度**: 4
 - **相关性**: 85%
 
 ## AI摘要
-The AWG800 is a state-of-the-art atmospheric water generator capable of producing up to 800 liters (211 gallons) of clean water daily while maintaining low power consumption. It meets or exceeds the water quality standards set by the World Health Organization (WHO) and the Environmental Protection Agency (EPA). The unit's dimensions are 1442 × 1245 × 1295 mm (approximately 4 ft 9 in L x 4 ft 1 in W). For further technical details, a brochure is available for download.
+The AWG800 is a state-of-the-art atmospheric water generator capable of producing up to 800 liters (211 gallons) of clean water daily, with low power consumption. It meets and exceeds the water quality standards set by the World Health Organization (WHO) and the Environmental Protection Agency (EPA). The dimensions of the unit are 1442 × 1245 × 1295 mm, equivalent to approximately 4 ft 9 in in length and 4 ft 1 in in width. For further details, a technical brochure is available for download.
 
 ## 内容
 

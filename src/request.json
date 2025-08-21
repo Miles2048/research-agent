@@ -1,6 +1,6 @@
 {
   "user_id": "23",
-  "artifact_id": 38,
+  "artifact_id": 42,
   "artifacts_type": "A1",
   "artifact_task_id": "801518b7-e7bb-4163-97a6-c72894d667b6",
   "task_type": "masterflow",
@@ -27,7 +27,7 @@
     }
   },
   "callback_url": "https://your-domain.com/api/v1/artifacts/api-server-callback",
-  "_saved_at": "2025-08-21T22:21:20.434673",
+  "_saved_at": "2025-08-22T01:06:11.175654",
   "_request_path": "/api/research/task",
   "_task_type": "masterflow"
 }

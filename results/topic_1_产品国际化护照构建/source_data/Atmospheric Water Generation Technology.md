@@ -3,8 +3,8 @@
 ## 基本信息
 - **标题**: Atmospheric Water Generation Technology
 - **URL**: https://www.epa.gov/sites/default/files/2019-11/documents/awg_technical_brief_final_05nov19.pdf
-- **创建时间**: 2025-08-21 22:25:34
-- **更新时间**: 2025-08-21 22:25:34
+- **创建时间**: 2025-08-22 01:12:16
+- **更新时间**: 2025-08-22 01:12:16
 
 ## 评估信息
 - **资源类型**: official_statistics
@@ -12,7 +12,7 @@
 - **相关性**: 85%
 
 ## AI摘要
-The document from the U.S. Environmental Protection Agency evaluates Atmospheric Water Generation (AWG) technology, which produces potable water from ambient air. This technology offers a promising solution to enhance water availability during shortages, contamination incidents, and other disruptions to drinking water services. The report highlights the feasibility of AWGs as a means to address water scarcity and improve access to safe drinking water.
+The document from the U.S. Environmental Protection Agency evaluates Atmospheric Water Generation (AWG) technology, which produces potable water from ambient air. This technology offers a promising solution to enhance water availability in situations of scarcity, contamination, or disruptions in drinking water services. By harnessing moisture from the atmosphere, AWGs could play a crucial role in addressing water shortages and ensuring access to safe drinking water.
 
 ## 内容
 1 U.S. Environmental Protection Agency │ Office of Research and Development EPA/600/F-19/129│ November 2019
