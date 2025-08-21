@@ -27,7 +27,7 @@
     }
   },
   "callback_url": "https://your-domain.com/api/v1/artifacts/api-server-callback",
-  "_saved_at": "2025-08-21T16:15:23.729439",
+  "_saved_at": "2025-08-21T18:52:57.577512",
   "_request_path": "/api/research/task",
   "_task_type": "masterflow"
 }

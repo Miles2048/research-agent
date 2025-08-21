@@ -729,6 +729,51 @@ def finalize_answer(state: OverallState, config: RunnableConfig):
         custom_filename=configurable.report_filename
     )
     
+    # 从数据库获取评分信息并添加到sources中
+    try:
+        from .tools.database import DatabaseManager
+        db_manager = DatabaseManager()
+        
+        logger.info("开始获取数据源的评分信息...")
+        updated_sources = 0
+        
+        # 为每个源查询并添加评分信息
+        for source in unique_sources:
+            source_url = source.get("value", source.get("url", ""))
+            if source_url:
+                logger.info(f"🔍 正在查询URL评分: {source_url}")
+                
+                # 查询数据库获取评分信息
+                evaluation_data = db_manager.get_evaluation_by_url(source_url)
+                
+                if evaluation_data:
+                    logger.info(f"✅ 找到评分数据: {evaluation_data}")
+                    logger.info(f"📝 更新前source keys: {list(source.keys())}")
+                    source.update(evaluation_data)
+                    updated_sources += 1
+                    logger.info(f"📝 已更新评分信息: {source.get('title', 'Unknown')[:30]}...")
+                    logger.info(f"📝 更新后source keys: {list(source.keys())}")
+                    logger.info(f"🎯 更新后的source包含: credibility={source.get('credibility')}, related_assessment={source.get('related_assessment')}")
+                else:
+                    logger.warning(f"❌ 未找到评分数据: {source_url}")
+                    logger.info(f"📋 source标题: {source.get('title', 'Unknown')}")
+                    
+            else:
+                logger.warning(f"⚠️ source没有URL字段: {source.get('title', 'Unknown')}")
+                logger.info(f"📋 source所有字段: {list(source.keys())}")
+                    
+        logger.info(f"评分信息获取完成: {updated_sources}/{len(unique_sources)} 个数据源已更新")
+                    
+    except Exception as e:
+        logger.error(f"💥 [评分获取] 异常类型: {type(e).__name__}")
+        logger.error(f"💥 [评分获取] 异常详情: {str(e)}")
+        try:
+            import traceback
+            logger.error(f"💥 [评分获取] 异常堆栈: {traceback.format_exc()}")
+        except:
+            pass
+        logger.warning(f"获取评分信息失败，将使用默认值")
+    
     # 保存数据源到指定目录
     source_files = save_source_data(unique_sources, output_dir=custom_source_dir)
     

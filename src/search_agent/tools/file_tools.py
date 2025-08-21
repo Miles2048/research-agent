@@ -264,8 +264,14 @@ def save_source_data(sources: List[Dict[str, Any]], output_dir: str = "result/so
                     logger.debug(f"文件已存在，跳过: {filename}")
                     continue
                 
-                # 安全地获取摘要字段
+                # 安全地获取摘要字段和评分信息
                 summary = source.get('summary', '')
+                credibility = source.get('credibility', '待评估')
+                related_assessment = source.get('related_assessment', '待评估')
+                
+                # 格式化评分显示
+                credibility_display = credibility if isinstance(credibility, (int, float)) else credibility
+                related_display = f"{related_assessment}%" if isinstance(related_assessment, (int, float)) else related_assessment
                 
                 # 按照要求的格式构建数据源内容
                 content = f"""# {title}
@@ -276,14 +282,16 @@ def save_source_data(sources: List[Dict[str, Any]], output_dir: str = "result/so
 - **创建时间**: {current_time}
 - **更新时间**: {current_time}
 
+## 评估信息
+- **可信度**: {credibility_display}
+- **相关性**: {related_display}
+
 ## AI摘要
 {summary if summary else '暂无摘要'}
 
 ## 内容
 {content_text if content_text else '暂无内容'}
 
----
-*此数据源由AI研究代理自动保存*
 """
                 
                 # 保存文件

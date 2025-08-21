@@ -1320,6 +1320,67 @@ class DatabaseManager:
             'records_queried': 0
         }
         self._connection_count = 0
+    
+    def get_evaluation_by_url(self, url: str) -> Optional[Dict[str, Any]]:
+        """
+        根据URL获取评分信息
+        
+        Args:
+            url: 数据源URL
+            
+        Returns:
+            Dict[str, Any]: 评分信息字典，包含credibility, related_assessment等字段
+        """
+        try:
+            db_logger.info(f"🔍 [DB查询] 查询URL: {url}")
+            
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                
+                query = '''
+                    SELECT credibility, related_assessment
+                    FROM research_results_local 
+                    WHERE url = ?
+                    LIMIT 1
+                '''
+                
+                db_logger.info(f"📝 [DB查询] SQL执行")
+                cursor.execute(query, (url,))
+                row = cursor.fetchone()
+                
+                if row:
+                    result = {
+                        'credibility': row[0],
+                        'related_assessment': row[1]
+                    }
+                    db_logger.info(f"✅ [DB查询] 找到数据: {result}")
+                    return result
+                else:
+                    db_logger.warning(f"❌ [DB查询] URL未找到记录: {url}")
+                    
+                    # 查询数据库基本信息以调试
+                    cursor.execute("SELECT COUNT(*) FROM research_results_local")
+                    total_count = cursor.fetchone()[0]
+                    db_logger.info(f"📊 [DB查询] 数据库总记录数: {total_count}")
+                    
+                    # 查询前3条URL以比较
+                    cursor.execute("SELECT url FROM research_results_local LIMIT 3")
+                    sample_urls = cursor.fetchall()
+                    db_logger.info(f"📋 [DB查询] 数据库中的URL示例: {[u[0] for u in sample_urls]}")
+                    
+        except Exception as e:
+            db_logger.error(f"💥 [DB查询] 具体错误类型: {type(e).__name__}")
+            db_logger.error(f"💥 [DB查询] 错误详情: {str(e)}")
+            db_logger.error(f"💥 [DB查询] URL: {url}")
+            
+            # 尝试提供更多上下文信息
+            try:
+                import traceback
+                db_logger.error(f"💥 [DB查询] 错误堆栈: {traceback.format_exc()}")
+            except:
+                pass
+            
+        return None
 
 # 数据映射和转换功能
 
