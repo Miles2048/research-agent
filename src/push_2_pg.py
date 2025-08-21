@@ -232,8 +232,18 @@ class RemoteDataPusher:
             # 记录成功推送的ID
             pushed_ids = []
             
+            # 记录跳过的ID（也需要更新为pushed）
+            skipped_ids = []
+            
             for record in records:
                 try:
+                    # 检查 word_count 字段，如果小于 2000 则跳过
+                    word_count = record.get('word_count', 0)
+                    if word_count < 2000:
+                        print(f"    ⏭️ 跳过: {record.get('name', 'Unknown')[:40]} (字数: {word_count} < 2000)")
+                        skipped_ids.append(record['id'])
+                        continue
+                    
                     # 移除本地特有的字段
                     remote_record = record.copy()
                     remote_record.pop('id', None)  # 移除本地ID
