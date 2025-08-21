@@ -755,6 +755,18 @@ def finalize_answer(state: OverallState, config: RunnableConfig):
                     db_operation_stats = db_manager.get_operation_stats()
                     db_manager.log_operation_summary()
                     
+                    # 更新 publisher 字段
+                    try:
+                        import subprocess
+                        subprocess.run(
+                            ["python3", "update_research_data_publisher.py"],
+                            capture_output=True,
+                            text=True,
+                            timeout=30
+                        )
+                    except Exception as e:
+                        logger.warning(f"无法更新 publisher 字段: {str(e)}")
+                    
                     # 🆕 NEW: 立即进行字段评估
                     try:
                         logger.info("开始对新保存的记录进行字段评估...")
