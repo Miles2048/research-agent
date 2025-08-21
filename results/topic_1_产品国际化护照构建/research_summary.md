@@ -21,29 +21,73 @@
 
 ## 具体搜索指导
 重点搜索：1) 国际AWG产品技术标准和认证要求（WHO饮用水标准、EPA认证、CE标志要求）；2) 主要竞争对手（Watergen、Zero Mass Water、Aquatech等）的产品规格和市场定位；3) AWG行业专业术语的标准英文表达；4) 各国对AWG产品的进口要求和技术壁垒。
-- **时间**: 2025-08-22 01:12:16
+- **时间**: 2025-08-22 02:08:33
 
 ## 文件结构
 
 ### 主报告
-- [研究报告](topic_1_report_1.md)
+- [研究报告](topic_1_report_2.md)
 
-### 数据源 (5 个)
-- [数据源: AWG 800 - AWG Contracting US](source_data/AWG 800 - AWG Contracting US.md)
-- [数据源: Producing Safe Drinking Water Using an Atmospheric Water Generator (AWG) in an Urban Environment](source_data/Producing Safe Drinking Water Using an Atmospheric Water Generator (AWG) in an Urban Environment.md)
-- [数据源: Atmospheric Water Generation Technology](source_data/Atmospheric Water Generation Technology.md)
-- [数据源: Applications & Evolution of Atmospheric Water Generation ](source_data/Applications & Evolution of Atmospheric Water Generation .md)
-- [数据源: ASSE 1090-2020 for Drinking Water Atmospheric Water Generators ](source_data/ASSE 1090-2020 for Drinking Water Atmospheric Water Generators .md)
+### 数据源 (27 个)
+- [数据源: NSF   WQA   IAPMO](source_data/NSF _ WQA _ IAPMO.md)
+- [数据源: NSF ANSI CAN 61 certification  drinking water components testing](source_data/NSF_ANSI_CAN 61 certification_ drinking water components testing.md)
+- [数据源: What Is NSF Certification ](source_data/What Is NSF Certification_.md)
+- [数据源: APAC Atmospheric Water Generator Market Size, Share & Trends ](source_data/APAC Atmospheric Water Generator Market Size, Share & Trends .md)
+- [数据源: Atmospheric Water Generator (AWG) Market - 2035](source_data/Atmospheric Water Generator (AWG) Market - 2035.md)
+- [数据源: Top 50 Companies in Atmospheric Water Generator Market in the ](source_data/Top 50 Companies in Atmospheric Water Generator Market in the .md)
+- [数据源: South America Atmospheric Water Generator Market Size, Share ](source_data/South America Atmospheric Water Generator Market Size, Share .md)
+- [数据源: Top Watergen Alternatives, Competitors - CB Insights](source_data/Top Watergen Alternatives, Competitors - CB Insights.md)
+- [数据源: Microsoft Word - Technical Specs PPE Covid19 final V6.docx](source_data/Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx.md)
+- [数据源: Technical specifications for Pressure Swing Adsorption(PSA) Oxygen Plants](source_data/Technical specifications for Pressure Swing Adsorption(PSA) Oxygen Plants.md)
+- [数据源: Technical specifications for selection of essential in vitro diagnostics for SARS-CoV-2](source_data/Technical specifications for selection of essential in vitro diagnostics for SARS-CoV-2.md)
+- [数据源: Technical Specifications Series for IVDs   WHO](source_data/Technical Specifications Series for IVDs _ WHO.md)
+- [数据源: Performance specifications   WHO - Prequalification of Medical Products (IVDs, Medicines, Vaccine...](source_data/Performance specifications _ WHO - Prequalification of Medical Products (IVDs, Medicines, Vaccine....md)
+- [数据源: Atmospheric Water Generator Deep Dive  Watergen Gen-M Pro](source_data/Atmospheric Water Generator Deep Dive_ Watergen Gen-M Pro.md)
+- [数据源: No Title](source_data/No Title.md)
+- [数据源: MOBILE BOX](source_data/MOBILE BOX.md)
+- [数据源: Watergen   Water from Air](source_data/Watergen _ Water from Air.md)
+- [数据源: Commercial   Water from Air Generator   Watergen](source_data/Commercial _ Water from Air Generator _ Watergen.md)
+- [数据源: The Innovative Technology Behind Zero Mass Water's SOURCE Device](source_data/The Innovative Technology Behind Zero Mass Water's SOURCE Device.md)
+- [数据源: Is this the world's worst water technology ](source_data/Is this the world's worst water technology_.md)
+- [数据源: Zero Mass Water hydro panels](source_data/Zero Mass Water hydro panels.md)
+- [数据源: Zero Mass Water](source_data/Zero Mass Water.md)
+- [数据源: Zero Mass Water  Latest News & Videos, Photos about Zero Mass Water   The Economic Times - Page 1](source_data/Zero Mass Water_ Latest News & Videos, Photos about Zero Mass Water _ The Economic Times - Page 1.md)
+- [数据源: Global Market Access for Your Products   Select a Country](source_data/Global Market Access for Your Products _ Select a Country.md)
+- [数据源: Standards Resources by Country](source_data/Standards Resources by Country.md)
+- [数据源: Comparison   Asia Pacific Food Law Guide   Baker McKenzie Resource Hub](source_data/Comparison _ Asia Pacific Food Law Guide _ Baker McKenzie Resource Hub.md)
+- [数据源: Product Standards](source_data/Product Standards.md)
 
 ## 目录结构
 ```
 result/
 ├── research_summary.md     # 本文件
-├── topic_1_report_1.md           # 主研究报告
+├── topic_1_report_2.md           # 主研究报告
 └── source_data/            # 数据源目录
-    ├── AWG 800 - AWG Contracting US.md
-    ├── Producing Safe Drinking Water Using an Atmospheric Water Generator (AWG) in an Urban Environment.md
-    ├── Atmospheric Water Generation Technology.md
-    ├── Applications & Evolution of Atmospheric Water Generation .md
-    ├── ASSE 1090-2020 for Drinking Water Atmospheric Water Generators .md
+    ├── NSF _ WQA _ IAPMO.md
+    ├── NSF_ANSI_CAN 61 certification_ drinking water components testing.md
+    ├── What Is NSF Certification_.md
+    ├── APAC Atmospheric Water Generator Market Size, Share & Trends .md
+    ├── Atmospheric Water Generator (AWG) Market - 2035.md
+    ├── Top 50 Companies in Atmospheric Water Generator Market in the .md
+    ├── South America Atmospheric Water Generator Market Size, Share .md
+    ├── Top Watergen Alternatives, Competitors - CB Insights.md
+    ├── Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx.md
+    ├── Technical specifications for Pressure Swing Adsorption(PSA) Oxygen Plants.md
+    ├── Technical specifications for selection of essential in vitro diagnostics for SARS-CoV-2.md
+    ├── Technical Specifications Series for IVDs _ WHO.md
+    ├── Performance specifications _ WHO - Prequalification of Medical Products (IVDs, Medicines, Vaccine....md
+    ├── Atmospheric Water Generator Deep Dive_ Watergen Gen-M Pro.md
+    ├── No Title.md
+    ├── MOBILE BOX.md
+    ├── Watergen _ Water from Air.md
+    ├── Commercial _ Water from Air Generator _ Watergen.md
+    ├── The Innovative Technology Behind Zero Mass Water's SOURCE Device.md
+    ├── Is this the world's worst water technology_.md
+    ├── Zero Mass Water hydro panels.md
+    ├── Zero Mass Water.md
+    ├── Zero Mass Water_ Latest News & Videos, Photos about Zero Mass Water _ The Economic Times - Page 1.md
+    ├── Global Market Access for Your Products _ Select a Country.md
+    ├── Standards Resources by Country.md
+    ├── Comparison _ Asia Pacific Food Law Guide _ Baker McKenzie Resource Hub.md
+    ├── Product Standards.md
 ```

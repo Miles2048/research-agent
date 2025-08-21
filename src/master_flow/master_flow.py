@@ -203,18 +203,18 @@ async def step2_3_data_migration(artifact_id: int, company_id: int = 3, user_id:
 
 
 async def step2_3_auto_data_sync(artifact_id: int, company_id: int = 3, user_id: int = 3):
-    """步骤2.3: 新的自动化数据同步（替代原有的不合理表结构）
+    """步骤2.3: 直接推送 research_data.db 到远程数据库
     
     Args:
         artifact_id: 工作空间ID
         company_id: 公司ID (来自API)
         user_id: 用户ID (来自API，对应数据库中的created_by字段)
     """
-    print("\n🚀 步骤2.3: 自动化数据同步（新架构）")
+    print("\n🚀 步骤2.3: 推送 research_data.db 到远程数据库")
     print("=" * 60)
     
     try:
-        # 导入自动化数据同步模块
+        # 导入必要的模块
         import sys
         import os
         
@@ -224,15 +224,15 @@ async def step2_3_auto_data_sync(artifact_id: int, company_id: int = 3, user_id:
         if src_dir not in sys.path:
             sys.path.insert(0, src_dir)
         
-        # 动态导入自动化同步模块
-        from auto_sync_data import AutoDataSync
+        # 导入推送模块
+        from push_2_pg import RemoteDataPusher
         
-        print(f"📋 开始自动化数据同步:")
+        print(f"📋 开始推送数据:")
         print(f"  artifact_id: {artifact_id}")
         print(f"  company_id: {company_id}")  
         print(f"  created_by: {user_id}")
         
-        # 确保request.json包含正确的参数（因为自动同步脚本会从中读取）
+        # 确保request.json包含正确的参数（push_2_pg会从中读取）
         request_json_path = "src/request.json"
         if os.path.exists(request_json_path):
             import json
@@ -242,7 +242,7 @@ async def step2_3_auto_data_sync(artifact_id: int, company_id: int = 3, user_id:
                 
                 # 更新关键参数
                 request_data['artifact_id'] = artifact_id
-                request_data['user_id'] = user_id
+                request_data['user_id'] = str(user_id)  # 确保是字符串
                 if 'company' in request_data:
                     request_data['company']['company_id'] = str(company_id)
                 else:
@@ -259,46 +259,47 @@ async def step2_3_auto_data_sync(artifact_id: int, company_id: int = 3, user_id:
         else:
             print(f"⚠️ request.json不存在: {request_json_path}")
         
-        # 创建自动化同步器
-        syncer = AutoDataSync(
-            local_db_path="local_source_data.db",
-            results_dir="results",
-            request_json_path=request_json_path,
-            env_path=".env",
-            clean_start=True  # 清理旧数据，确保使用最新的results
+        # 创建推送器，使用 research_data.db
+        pusher = RemoteDataPusher(
+            local_db_path="research_data.db",  # 改为使用 research_data.db
+            env_path=".env"
         )
         
-        print("🔄 执行自动化数据同步...")
+        print("🔄 执行数据推送...")
         
-        # 执行完整的数据同步流程
-        sync_result = syncer.run(push_to_remote=True, batch_size=100)
+        # 测试远程连接
+        if not pusher.test_remote_connection():
+            print("❌ 无法连接到远程数据库")
+            return False
         
-        # 检查执行结果
-        if sync_result.get('error'):
-            print(f"❌ 自动化数据同步出错: {sync_result['error']}")
-            print("⚠️ 跳过数据同步，继续后续步骤")
-            return True  # 不阻断流程
+        # 创建远程表（如果不存在）
+        pusher.create_remote_table_if_not_exists()
         
-        # 显示同步统计
-        print(f"\n📊 自动化数据同步完成:")
-        print(f"  ✅ 本地生成: {sync_result.get('local_generated', 0)} 条")
-        print(f"  ☁️  远程推送: {sync_result.get('remote_pushed', 0)} 条") 
-        print(f"  ❌ 推送失败: {sync_result.get('remote_failed', 0)} 条")
+        # 执行推送（需要修改表名）
+        # 注意：research_data.db 使用的表名是 research_results_local
+        pusher.local_table_name = "research_results_local"  # 设置正确的表名
         
-        duration = 0
-        if sync_result.get('start_time') and sync_result.get('end_time'):
-            duration = (sync_result['end_time'] - sync_result['start_time']).total_seconds()
-            print(f"  ⏱️  总耗时: {duration:.2f} 秒")
+        # 获取推送前的状态
+        initial_records = pusher.get_unpushed_records()
+        print(f"📊 发现 {len(initial_records)} 条待推送记录")
         
-        # 判断是否成功
-        local_generated = sync_result.get('local_generated', 0)
-        remote_pushed = sync_result.get('remote_pushed', 0)
+        # 执行批量推送
+        pusher.push_all(batch_size=100)
         
-        if local_generated > 0 or remote_pushed > 0:
-            print("✅ 自动化数据同步成功完成")
+        # 获取推送后的状态
+        final_records = pusher.get_unpushed_records()
+        pushed_count = len(initial_records) - len(final_records)
+        
+        # 显示推送统计
+        print(f"\n📊 数据推送完成:")
+        print(f"  ☁️  成功推送: {pushed_count} 条")
+        print(f"  ❌ 未推送: {len(final_records)} 条")
+        
+        if pushed_count > 0:
+            print("✅ 数据推送成功完成")
             return True
         else:
-            print("⚠️ 自动化数据同步无数据处理，可能需要检查results目录")
+            print("⚠️ 没有数据被推送，请检查数据库状态")
             return True  # 仍然允许继续流程
         
     except ImportError as e:

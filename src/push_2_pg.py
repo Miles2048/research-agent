@@ -80,11 +80,14 @@ class RemoteDataPusher:
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         
+        # 动态确定表名（支持两种数据库）
+        table_name = getattr(self, 'local_table_name', 'source_data')
+        
         # 原查询：只检查pushed状态
-        # query = "SELECT * FROM source_data WHERE pushed = 0"
+        # query = f"SELECT * FROM {table_name} WHERE pushed = 0"
         
         # 新查询：同时检查pushed状态、artifact_id和created_by(对应user_id)
-        query = "SELECT * FROM source_data WHERE pushed = 0 AND artifact_id = ? AND created_by = ?"
+        query = f"SELECT * FROM {table_name} WHERE pushed = 0 AND artifact_id = ? AND created_by = ?"
         params = [artifact_id, user_id]
         
         if limit:
@@ -297,9 +300,12 @@ class RemoteDataPusher:
         conn = sqlite3.connect(self.local_db_path)
         cursor = conn.cursor()
         
+        # 动态确定表名（支持两种数据库）
+        table_name = getattr(self, 'local_table_name', 'source_data')
+        
         # 批量更新
         placeholders = ','.join('?' * len(record_ids))
-        update_sql = f"UPDATE source_data SET pushed = 1 WHERE id IN ({placeholders})"
+        update_sql = f"UPDATE {table_name} SET pushed = 1 WHERE id IN ({placeholders})"
         
         cursor.execute(update_sql, record_ids)
         conn.commit()

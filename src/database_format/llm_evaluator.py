@@ -107,13 +107,7 @@ class LLMEvaluator:
             response = self._call_llm(prompt)
             
             if response:
-                # 临时日志：查看原始响应
-                logger.info(f"[TEMP DEBUG] Raw LLM response (first 500 chars): {response[:500]}")
-                
                 result = self._parse_json_response(response)
-                
-                # 临时日志：查看解析后的JSON
-                logger.info(f"[TEMP DEBUG] Parsed JSON result: {result}")
                 
                 if result and all(key in result for key in ['credibility', 'credibility_assessment', 
                                                               'related_assessment', 'related_assessment_text']):
@@ -124,12 +118,6 @@ class LLMEvaluator:
                         related_assessment=float(result['related_assessment']),
                         related_assessment_text=result['related_assessment_text']
                     )
-                else:
-                    # 临时日志：查看缺失的字段
-                    if result:
-                        logger.warning(f"[TEMP DEBUG] Missing fields. Expected: ['credibility', 'credibility_assessment', 'related_assessment', 'related_assessment_text'], Got: {list(result.keys())}")
-                    else:
-                        logger.warning(f"[TEMP DEBUG] Result is None or empty")
                     
         except Exception as e:
             logger.error(f"Error in comprehensive evaluation: {str(e)}")

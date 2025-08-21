@@ -10,10 +10,10 @@ from typing import List, Dict, Any
 from exa_py import Exa
 
 # 配置常量
-SNIPPET_LENGTH = 50000  # snippet长度，增加到50k字符以保存更多内容
-FULL_TEXT_LENGTH = 50000  # 完整文本长度限制，50k字符
+SNIPPET_LENGTH = 70000  # snippet长度，增加到70k字符以保存更多内容
+FULL_TEXT_LENGTH = 70000  # 完整文本长度限制，70k字符
 
-def perform_exa_search(query: str, num_results: int = 5) -> List[Dict[str, str]]:
+def perform_exa_search(query: str, num_results: int = 6) -> List[Dict[str, str]]:
     """使用 Exa API 执行网络搜索
     
     Args:
