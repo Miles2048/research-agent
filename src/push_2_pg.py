@@ -62,15 +62,35 @@ class RemoteDataPusher:
         Returns:
             未推送的记录列表
         """
+        # 从request.json获取artifact_id和user_id
+        import json
+        request_json_path = "src/request.json"
+        try:
+            with open(request_json_path, 'r', encoding='utf-8') as f:
+                request_data = json.load(f)
+            artifact_id = request_data.get('artifact_id')
+            user_id = request_data.get('user_id')
+            
+            if not artifact_id or not user_id:
+                raise ValueError(f"request.json中缺少必需字段: artifact_id={artifact_id}, user_id={user_id}")
+        except Exception as e:
+            raise RuntimeError(f"无法获取必需的artifact_id和user_id: {str(e)}")
+        
         conn = sqlite3.connect(self.local_db_path)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         
-        query = "SELECT * FROM source_data WHERE pushed = 0"
+        # 原查询：只检查pushed状态
+        # query = "SELECT * FROM source_data WHERE pushed = 0"
+        
+        # 新查询：同时检查pushed状态、artifact_id和created_by(对应user_id)
+        query = "SELECT * FROM source_data WHERE pushed = 0 AND artifact_id = ? AND created_by = ?"
+        params = [artifact_id, user_id]
+        
         if limit:
             query += f" LIMIT {limit}"
         
-        cursor.execute(query)
+        cursor.execute(query, params)
         rows = cursor.fetchall()
         
         # 转换为字典列表
@@ -82,6 +102,7 @@ class RemoteDataPusher:
         conn.close()
         
         print(f"📊 找到 {len(records)} 条未推送记录")
+        print(f"   过滤条件: artifact_id={artifact_id}, user_id={user_id}")
         return records
     
     def test_remote_connection(self) -> bool:
