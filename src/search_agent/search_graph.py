@@ -717,84 +717,11 @@ def finalize_answer(state: OverallState, config: RunnableConfig):
         "sources_count": len(unique_sources)
     }
     
-    # 保存报告 - 使用配置的路径和文件名
+    # 设置输出路径
     custom_output_dir = configurable.output_dir or "result"
     custom_source_dir = configurable.source_data_dir or "result/source_data"
     
-    report_path = save_report(
-        report_content=result.content,
-        query=query,
-        metadata=metadata,
-        output_dir=custom_output_dir,
-        custom_filename=configurable.report_filename
-    )
-    
-    # 从数据库获取评分信息并添加到sources中
-    try:
-        from .tools.database import DatabaseManager
-        db_manager = DatabaseManager()
-        
-        logger.info("开始获取数据源的评分信息...")
-        updated_sources = 0
-        
-        # 为每个源查询并添加评分信息
-        for source in unique_sources:
-            source_url = source.get("value", source.get("url", ""))
-            if source_url:
-                logger.info(f"🔍 正在查询URL评分: {source_url}")
-                
-                # 查询数据库获取评分信息
-                evaluation_data = db_manager.get_evaluation_by_url(source_url)
-                
-                if evaluation_data:
-                    logger.info(f"✅ 找到评分数据: {evaluation_data}")
-                    logger.info(f"📝 更新前source keys: {list(source.keys())}")
-                    source.update(evaluation_data)
-                    updated_sources += 1
-                    logger.info(f"📝 已更新评分信息: {source.get('title', 'Unknown')[:30]}...")
-                    logger.info(f"📝 更新后source keys: {list(source.keys())}")
-                    logger.info(f"🎯 更新后的source包含: credibility={source.get('credibility')}, related_assessment={source.get('related_assessment')}")
-                else:
-                    logger.warning(f"❌ 未找到评分数据: {source_url}")
-                    logger.info(f"📋 source标题: {source.get('title', 'Unknown')}")
-                    
-            else:
-                logger.warning(f"⚠️ source没有URL字段: {source.get('title', 'Unknown')}")
-                logger.info(f"📋 source所有字段: {list(source.keys())}")
-                    
-        logger.info(f"评分信息获取完成: {updated_sources}/{len(unique_sources)} 个数据源已更新")
-                    
-    except Exception as e:
-        logger.error(f"💥 [评分获取] 异常类型: {type(e).__name__}")
-        logger.error(f"💥 [评分获取] 异常详情: {str(e)}")
-        try:
-            import traceback
-            logger.error(f"💥 [评分获取] 异常堆栈: {traceback.format_exc()}")
-        except:
-            pass
-        logger.warning(f"获取评分信息失败，将使用默认值")
-    
-    # 保存数据源到指定目录
-    source_files = save_source_data(unique_sources, output_dir=custom_source_dir)
-    
-    # 创建研究摘要
-    summary_path = None
-    if report_path and source_files:
-        summary_path = create_summary_file(report_path, source_files, query, output_dir=custom_output_dir)
-
-    # 总结文件保存结果
-    saved_count = 0
-    if report_path:
-        saved_count += 1
-    if source_files:
-        saved_count += len(source_files)
-    if summary_path:
-        saved_count += 1
-    
-    if saved_count > 0:
-        logger.success(f"研究文件保存完成: 共 {saved_count} 个文件")
-
-    # 数据库持久化逻辑
+    # 先进行数据库持久化和评估
     db_saved_count = 0
     db_operation_stats = {}
     try:
@@ -914,6 +841,77 @@ def finalize_answer(state: OverallState, config: RunnableConfig):
     except Exception as e:
         logger.error(f"数据库保存失败: {str(e)}")
         # 数据库操作失败不影响主流程，继续返回结果
+
+    # 从数据库获取评分信息并添加到sources中
+    try:
+        logger.info("开始从数据库获取评分信息...")
+        updated_sources = 0
+        
+        # 为每个源查询并添加评分信息
+        for source in unique_sources:
+            source_url = source.get("value", source.get("url", ""))
+            if source_url:
+                logger.info(f"🔍 正在查询URL评分: {source_url}")
+                
+                # 查询数据库获取评分信息
+                evaluation_data = db_manager.get_evaluation_by_url(source_url)
+                
+                if evaluation_data:
+                    logger.info(f"✅ 找到评分数据: {evaluation_data}")
+                    logger.info(f"📝 更新前source keys: {list(source.keys())}")
+                    source.update(evaluation_data)
+                    updated_sources += 1
+                    logger.info(f"📝 已更新评分信息: {source.get('title', 'Unknown')[:30]}...")
+                    logger.info(f"📝 更新后source keys: {list(source.keys())}")
+                    logger.info(f"🎯 更新后的source包含: credibility={source.get('credibility')}, related_assessment={source.get('related_assessment')}")
+                else:
+                    logger.warning(f"❌ 未找到评分数据: {source_url}")
+                    logger.info(f"📋 source标题: {source.get('title', 'Unknown')}")
+                    
+            else:
+                logger.warning(f"⚠️ source没有URL字段: {source.get('title', 'Unknown')}")
+                logger.info(f"📋 source所有字段: {list(source.keys())}")
+                    
+        logger.info(f"评分信息获取完成: {updated_sources}/{len(unique_sources)} 个数据源已更新")
+                    
+    except Exception as e:
+        logger.error(f"💥 [评分获取] 异常类型: {type(e).__name__}")
+        logger.error(f"💥 [评分获取] 异常详情: {str(e)}")
+        try:
+            import traceback
+            logger.error(f"💥 [评分获取] 异常堆栈: {traceback.format_exc()}")
+        except:
+            pass
+        logger.warning(f"获取评分信息失败，将使用默认值")
+    
+    # 保存报告到文件
+    report_path = save_report(
+        report_content=result.content,
+        query=query,
+        metadata=metadata,
+        output_dir=custom_output_dir,
+        custom_filename=configurable.report_filename
+    )
+    
+    # 保存数据源到指定目录（现在包含评分信息）
+    source_files = save_source_data(unique_sources, output_dir=custom_source_dir)
+    
+    # 创建研究摘要
+    summary_path = None
+    if report_path and source_files:
+        summary_path = create_summary_file(report_path, source_files, query, output_dir=custom_output_dir)
+
+    # 总结文件保存结果
+    saved_count = 0
+    if report_path:
+        saved_count += 1
+    if source_files:
+        saved_count += len(source_files)
+    if summary_path:
+        saved_count += 1
+    
+    if saved_count > 0:
+        logger.success(f"研究文件保存完成: 共 {saved_count} 个文件")
 
     return {
         "messages": [AIMessage(content=result.content)],
