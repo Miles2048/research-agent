@@ -21,29 +21,29 @@
 
 ## 具体搜索指导
 重点搜索：1) 国际AWG产品技术标准和认证要求（WHO饮用水标准、EPA认证、CE标志要求）；2) 主要竞争对手（Watergen、Zero Mass Water、Aquatech等）的产品规格和市场定位；3) AWG行业专业术语的标准英文表达；4) 各国对AWG产品的进口要求和技术壁垒。
-- **时间**: 2025-08-21 13:01:12
+- **时间**: 2025-08-21 16:17:36
 
 ## 文件结构
 
 ### 主报告
-- [研究报告](topic_1_report.md)
+- [研究报告](topic_1_report_3.md)
 
 ### 数据源 (5 个)
-- [数据源: Drinking-water quality guidelines](source_data/Drinking-water quality guidelines.md)
-- [数据源: A global overview of national regulations and standards for drinking-water quality](source_data/A global overview of national regulations and standards for drinking-water quality.md)
-- [数据源: Publications](source_data/Publications.md)
-- [数据源: Drinking Water Regulations   US EPA](source_data/Drinking Water Regulations _ US EPA.md)
-- [数据源: Understanding drinking water requirements under FIFRA ](source_data/Understanding drinking water requirements under FIFRA .md)
+- [数据源: AWG 800 - AWG Contracting US 1](source_data/AWG 800 - AWG Contracting US_1.md)
+- [数据源: Genny Water Treatment   Watergen](source_data/Genny Water Treatment _ Watergen.md)
+- [数据源: Product Certifications & Quality Standards   Awal Gulf Manufacturing](source_data/Product Certifications & Quality Standards _ Awal Gulf Manufacturing.md)
+- [数据源: ACS Certification   AWA Faucet - French Design](source_data/ACS Certification _ AWA Faucet - French Design.md)
+- [数据源: What are the International Regulations for Electrical Products  1](source_data/What are the International Regulations for Electrical Products__1.md)
 
 ## 目录结构
 ```
 result/
 ├── research_summary.md     # 本文件
-├── topic_1_report.md           # 主研究报告
+├── topic_1_report_3.md           # 主研究报告
 └── source_data/            # 数据源目录
-    ├── Drinking-water quality guidelines.md
-    ├── A global overview of national regulations and standards for drinking-water quality.md
-    ├── Publications.md
-    ├── Drinking Water Regulations _ US EPA.md
-    ├── Understanding drinking water requirements under FIFRA .md
+    ├── AWG 800 - AWG Contracting US_1.md
+    ├── Genny Water Treatment _ Watergen.md
+    ├── Product Certifications & Quality Standards _ Awal Gulf Manufacturing.md
+    ├── ACS Certification _ AWA Faucet - French Design.md
+    ├── What are the International Regulations for Electrical Products__1.md
 ```

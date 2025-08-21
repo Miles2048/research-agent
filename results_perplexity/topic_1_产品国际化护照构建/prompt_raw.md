@@ -1,7 +1,7 @@
 ---
 title: Raw Prompt for Perplexity Report Generation
 topic_id: topic_1
-generated_at: 2025-08-21 13:04:45
+generated_at: 2025-08-21 16:20:09
 model: sonar-pro
 api_used: Perplexity Sonar API
 ---
@@ -137,7 +137,245 @@ World Health Organization
 *此数据源由AI研究代理自动保存*
 
 
-### 数据源 2: Drinking Water Regulations _ US EPA.md
+### 数据源 2: ACS Certification _ AWA Faucet - French Design.md
+# ACS Certification | AWA Faucet - French Design
+
+## 基本信息
+- **标题**: ACS Certification | AWA Faucet - French Design
+- **URL**: https://awafaucet.com/certification/
+- **创建时间**: 2025-08-21 16:17:36
+- **更新时间**: 2025-08-21 16:17:36
+
+## AI摘要
+The provided content does not contain sufficient information to generate a meaningful summary. It primarily includes social media links related to AWA Faucet, with no details about the ACS Certification or the French design aspects of the product. Please provide more specific content or context for a comprehensive summary.
+
+## 内容
+| | | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [![](https://awafaucet.com/wp-content/uploads/icon-facebook-wt.png)](https://www.facebook.com/AwaFaucet) | | [![](https://awafaucet.com/wp-content/uploads/icon-instagram-wt.png)](http://instagram.com/AwaFaucet) | | [![](https://awafaucet.com/wp-content/uploads/icon-pintrest-wt.png)](http://www.pinterest.com/AwaFaucet/) | | [![](https://awafaucet.com/wp-content/uploads/icon-diaspora-wt.png)](https://framasphere.org/people/1ecdf62095e00135928b2a0000053625) | | [![](https://awafaucet.com/wp-content/uploads/icon-youtube-wt.png)](https://www.youtube.com/channel/UCs6f2jfJcX60VZ1HVYwS9Kw) |
+
+# Certification
+
+## **ACS Certification**
+
+AWA Taps are approved by the French Ministry of Health as complying with the regulation about materials in contact with drinking water (Sanitary Conformity Certification, ACS).
+
+All AWA products are made from materials that comply with ACS standard
+
+Non-leaded brass castings available
+
+## **Manufacturing**
+
+according ISO 9001 (Quality Management System) &amp; ISO 14001
+
+(Environmental Management)
+
+## **Flexible Hoses**
+
+with PEX inliner certified according: ACS, DVGW, CSTBat, WRAS, Kiwa, NSF, Aenor
+
+## **Ceramic Cartridges**
+
+Certified according: ACS, KTW W270, NSF, WRAS, NF, WaterMark, EN-817 / NF-077 +
+
+ASME a11.
+
+## **Neoperl Aerator**
+
+EN246, ACS, ANSI/NSF61, ASME
+
+![ACS Certification](https://awafaucet.co
+
+### 数据源 3: AS_NZS 4020 Product testing.md
+# AS/NZS 4020 Product testing
+
+## 基本信息
+- **标题**: AS/NZS 4020 Product testing
+- **URL**: https://www.awqc.com.au/asnzs-4020-product-testing
+- **创建时间**: 2025-08-21 15:39:02
+- **更新时间**: 2025-08-21 15:39:02
+
+## AI摘要
+The AS/NZS 4020 Product Testing site highlights the services of AWQC, Australia's leading NATA accredited laboratory specializing in compliance testing to the AS/NZS 4020:2018 standard, including its amendment. AWQC was the first laboratory in Australia to provide testing for these standards and has since tested thousands of products, ensuring quality and adherence to both national and international standards, such as BS6920.
+
+## 内容
+This site uses cookies to analyse traffic, remember your preferences, and optimise your experience.
+
+×
+
+# AS/NZS 4020 Product testing
+
+Ensuring quality and compliance to AS/NZS 4020:2018 (incorporating Amendment No.1), we are Australia’s leading NATA accredited product testing laboratory.
+
+AWQC was the first laboratory in Australia to offer testing to AS/NZS 4020 standards and equivalent International Standards, such as BS6920. Since then, we have tested thousands of products and have developed a deep understanding of industry requirements.
+
+NATA accreditation has been obtained for all tests prescribed in the Standard. Certificates of testing and test reports issued by our laboratory are recognised by Standards Australia and the major Water Authorities.
+
+[![](https://www.awqc.com.au/__data/assets/image/0003/1002/Italiano.jpg)![Download factsheet call to action button](https://www.awqc.com.au/__data/assets/image/0010/579160/AWQC-website_buttons_high-res_Download-factsheet.png)](https://www.awqc.com.au/__data/assets/pdf_file/0010/579367/AWQC-Product-testing-to-ASNZS-4020-fact-sheet.pdf)
+
+[iframe](https://www.youtube.com/embed/Na46iQ1X3pI?rel=0)
+
+## Overview of the standard
+
+The Standard requires that products do not affect the taste or appearance of water; do not support the growth of microorganisms; and do not release cytotoxic or
+
+### 数据源 4: AS_NZS 4020_2005 Testing of products for use in contact with drinking water.md
+# AS/NZS 4020:2005 Testing of products for use in contact with drinking water
+
+## 基本信息
+- **标题**: AS/NZS 4020:2005 Testing of products for use in contact with drinking water
+- **URL**: https://hanavai.pf/wp-content/uploads/2021/09/as-nws-4020.pdf
+- **创建时间**: 2025-08-21 15:39:02
+- **更新时间**: 2025-08-21 15:39:02
+
+## AI摘要
+The document titled "AS/NZS 4020:2005 Testing of products for use in contact with drinking water" outlines the Australian and New Zealand standard for assessing the safety of materials intended for contact with drinking water. It is licensed to Pioneer Water Tanks (Australia) P/L as of December 21, 2006, under a personal user license. The document includes links for checking its current status, accessing similar documents, and additional resources. For further information, users can visit the provided website.
+
+## 内容
+LICENCE
+for
+Licensee:
+Date: 
+Conditions of use: Click here for full conditions of Licence
+WEB LINKS
+Check if this document is current 
+Find similar documents 
+StandardsWatch (info and login)
+Visit our website
+International Standards on-line at www.saiglobal.com/shop
+AS/NZS 4020:2005 
+Australian/New Zealand Standard™ 
+Testing of products for use in contact 
+with drinking water 
+AS/NZS 4020:2005 Licensed to Pioneer Water Tanks (Australia) P/L on 21 Dec 2006. 1 user personal user licence only. Storage, distribution or use on network prohibited.
+AS/NZS 4020:2005 
+This Joint Australian/New Zealand Standard was prepared by Joint Technical 
+Committee CH-034, Materials in Contact with Drinking Water. It was approved on 
+behalf of the Council of Standards Australia on 20 October 2005 and on behalf of 
+the Council of Standards New Zealand on 4 November 2005. 
+This Standard was published on 29 November 2005. 
+The following are represented on Committee CH-034: 
+AUSTRAP 
+Australian Chamber of Commerce and Industry 
+Australian Electrical and Electronic Manufacturers Association 
+Australian Industry Group 
+Australian Paint Manufacturers’ Federation 
+A
+
+### 数据源 5: AWG 800 - AWG Contracting US.md
+# AWG 800 - AWG Contracting US
+
+## 基本信息
+- **标题**: AWG 800 - AWG Contracting US
+- **URL**: https://awgcontractingus.com/product/awg-800/
+- **创建时间**: 2025-08-21 15:39:02
+- **更新时间**: 2025-08-21 15:39:02
+
+## AI摘要
+The AWG800 is a cutting-edge atmospheric water generator capable of producing up to 800 liters (211 gallons) of clean water daily, while maintaining low power consumption. Its water quality surpasses the standards set by the World Health Organization (WHO) and the Environmental Protection Agency (EPA). The unit's dimensions are 1442 × 1245 × 1295 mm (approximately 4 ft 9 in L x 4 ft 1 in W). For more detailed specifications, a technical brochure is available for download.
+
+## 内容
+
+ Description 
+ UNLIMITED CLEAN WATER 
+The AWG800 is the most advanced atmospheric water generator with low power consumption. Engineered to produce up to 800 liters / 211 gallons of clean water a day. 
+ The AWG800 water quality meets and exceeds World 
+Health Organization (WHO) and Environmental 
+Protection Agency (EPA) standards. 
+ Download the “Technical Brochure” AWG800 Gen-3 Spec Sheet 
+ 
+ Additional information 
+ 
+ 
+ Dimensions 
+ 1442 × 1245 × 1295 mm 
+ 
+ 
+ Size 
+ 4 ft 9 in L x 4 ft 1 in W x 4 ft 3 in H 
+ 
+ 
+ 
+ 
+ AWG800 Unit Features Include: 
+ » Daily water capacity production: 800 liters a day 
+(can produce more in certain environmental conditions) 
+ » kWh: 0.60 kWh/gallon (0.18 kWh/l) 
+ » Wide range of operating conditions: 
+5oC-55oC; 20%-99% RH 
+ » Electric; 400/460 V, 3-phase, 50-60 Hz 
+ » Components NSF 61 certified. 
+ » Power Supply: Electrical Grid and/or Generator 
+ » Power control enclosure is NEMA type 4X 
+ » Efficient one-person setup. 
+ » Easy transport and handling. 
+ » Automated controls. 
+ » O-Zone Treatment system and complete water filtration. 
+ » Remote Operation 
+ » Internal pumping. 
+ » Electric and electronic box refrigerated. 
+ » For extreme conditions and heavy-duty use; 
+Specific to Military Use 
+ » Stackable construction with wheels and handles for 
+trans
+
+### 数据源 6: AWG 800 - AWG Contracting US_1.md
+# AWG 800 - AWG Contracting US
+
+## 基本信息
+- **标题**: AWG 800 - AWG Contracting US
+- **URL**: https://awgcontractingus.com/product/awg-800/
+- **创建时间**: 2025-08-21 16:17:36
+- **更新时间**: 2025-08-21 16:17:36
+
+## AI摘要
+The AWG800 is a cutting-edge atmospheric water generator designed to produce up to 800 liters (211 gallons) of clean water daily while maintaining low power consumption. It meets and surpasses the water quality standards set by the World Health Organization (WHO) and the Environmental Protection Agency (EPA). The unit's dimensions are 1442 × 1245 × 1295 mm, equivalent to approximately 4 ft 9 in in length and 4 ft 1 in in width. For more detailed specifications, a technical brochure is available for download.
+
+## 内容
+
+ Description 
+ UNLIMITED CLEAN WATER 
+The AWG800 is the most advanced atmospheric water generator with low power consumption. Engineered to produce up to 800 liters / 211 gallons of clean water a day. 
+ The AWG800 water quality meets and exceeds World 
+Health Organization (WHO) and Environmental 
+Protection Agency (EPA) standards. 
+ Download the “Technical Brochure” AWG800 Gen-3 Spec Sheet 
+ 
+ Additional information 
+ 
+ 
+ Dimensions 
+ 1442 × 1245 × 1295 mm 
+ 
+ 
+ Size 
+ 4 ft 9 in L x 4 ft 1 in W x 4 ft 3 in H 
+ 
+ 
+ 
+ 
+ AWG800 Unit Features Include: 
+ » Daily water capacity production: 800 liters a day 
+(can produce more in certain environmental conditions) 
+ » kWh: 0.60 kWh/gallon (0.18 kWh/l) 
+ » Wide range of operating conditions: 
+5oC-55oC; 20%-99% RH 
+ » Electric; 400/460 V, 3-phase, 50-60 Hz 
+ » Components NSF 61 certified. 
+ » Power Supply: Electrical Grid and/or Generator 
+ » Power control enclosure is NEMA type 4X 
+ » Efficient one-person setup. 
+ » Easy transport and handling. 
+ » Automated controls. 
+ » O-Zone Treatment system and complete water filtration. 
+ » Remote Operation 
+ » Internal pumping. 
+ » Electric and electronic box refrigerated. 
+ » For extreme conditions and heavy-duty use; 
+Specific to Military Use 
+ » Stackable constructi
+
+### 数据源 7: Drinking Water Regulations _ US EPA.md
 # Drinking Water Regulations | US EPA
 
 ## 基本信息
@@ -172,7 +410,7 @@ Below are the drinking water rule pages grouped by contaminant type.
 | --- | --- |
 | **Chemical contaminants** | - [Arsenic rule](https://www.epa.gov/dwreginfo/chemical-contaminant-rules) - [C
 
-### 数据源 3: Drinking-water quality guidelines.md
+### 数据源 8: Drinking-water quality guidelines.md
 # Drinking-water quality guidelines
 
 ## 基本信息
@@ -203,76 +441,53 @@ Drinking-water quality guidelines
 - [Drinking-water quality regulation](https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/drinking-water-quality-regulation)
 - [Small water supply management](https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/s
 
-### 数据源 4: Publications.md
-# Publications
+### 数据源 9: Energy Conservation Program for Appliance Standards_ Certification .md
+# Energy Conservation Program for Appliance Standards: Certification ...
 
 ## 基本信息
-- **标题**: Publications
-- **URL**: https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/publications
-- **创建时间**: 2025-08-21 13:01:12
-- **更新时间**: 2025-08-21 13:01:12
+- **标题**: Energy Conservation Program for Appliance Standards: Certification ...
+- **URL**: https://www.federalregister.gov/documents/2024/10/09/2024-21950/energy-conservation-program-for-appliance-standards-certification-requirements-labeling-requirements
+- **创建时间**: 2025-08-21 15:15:07
+- **更新时间**: 2025-08-21 15:15:07
 
 ## AI摘要
-The provided content does not contain sufficient information to create a meaningful summary. It primarily consists of links and logos related to the World Health Organization (WHO) without any specific details about publications or research topics. For a more accurate summary, additional content detailing the publications or key findings would be necessary.
+The U.S. Department of Energy (DOE) has published a final rule to update certification provisions, labeling requirements, and enforcement measures for various consumer products and commercial equipment. This rule aims to enhance energy conservation by establishing new standards and amending existing ones, as detailed in the document. The changes are intended to ensure compliance and improve the efficiency of appliances and equipment in line with energy conservation goals.
 
 ## 内容
-[Skip to main content](https://www.who.int/www.who.int#content)
+## AGENCY:
 
-- [![World Health Organization](https://www.who.int/images/default-source/fallback/header-logos/h-logo-blue1820eae93c154e37b2588ab90fdbc17e.svg?sfvrsn=aaed4f35_20)](https://www.who.int/)
-- ![World Health Organization](https://www.who.int/images/default-source/fallback/header-logos/h-logo-blue1820eae93c154e37b2588ab90fdbc17e.svg?sfvrsn=aaed4f35_20)
+Office of Energy Efficiency and Renewable Energy, Department of Energy.
 
+## SUMMARY:
 
-[![Home](https://www.who.int/ResourcePackages/WHO/assets/dist/images/logos/en/h-logo-blue.svg)](https://www.who.int/)
+The U.S. Department of Energy (“DOE”) is publishing a final rule to establish and amend the certification provisions, labeling requirements, and enforcement provisions for specific types of consumer products and commercial and industrial equipment, as described in sections II and III of this final rule. DOE is establishing and making amendments to the certification requirements, labeling requirements, and enforcement provisions for these products and equipment to ensure reporting that is consistent with currently applicable energy conservation standards and test procedures and to ensure DOE has the information necessary to determine the appropriate classification of products for the application of standards.
 
-Water Sanitation and Health
+## DATES:
 
-Our vision and mission are the attainment by all peoples of the lowest possible burden of water and sanitation-related disease through primary prevention.
+The effective date of this rule is December 23, 2024. This rule establishes new and amended certification and labeling requirements. For products or equipment for which this rule establishes the initial certification regulations for certifying compliance with new or amended s
 
-[About us](https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/about)
-
-## Section navigation
-
-- [Water safety and quality](https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality)
-- Publications
-- [Drinking-water quality guidelines](https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/drinking-water-quality-guidelines)
-- [Water safety planning](https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/water-safety-planning)
-
-### 数据源 5: Understanding drinking water requirements under FIFRA .md
-# Understanding drinking water requirements under FIFRA ...
+### 数据源 10: Federal, National, and International Data Standards _ US EPA.md
+# Federal, National, and International Data Standards | US EPA
 
 ## 基本信息
-- **标题**: Understanding drinking water requirements under FIFRA ...
-- **URL**: https://www.epa.gov/ground-water-and-drinking-water/understanding-drinking-water-requirements-under-fifra-and-sdwa
-- **创建时间**: 2025-08-21 13:01:12
-- **更新时间**: 2025-08-21 13:01:12
+- **标题**: Federal, National, and International Data Standards | US EPA
+- **URL**: https://www.epa.gov/data/federal-national-and-international-data-standards
+- **创建时间**: 2025-08-21 15:15:07
+- **更新时间**: 2025-08-21 15:15:07
 
 ## AI摘要
-The webpage titled "Understanding Drinking Water Requirements Under FIFRA and SDWA" provides an overview of the regulatory frameworks established by the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) and the Safe Drinking Water Act (SDWA) concerning drinking water safety. It outlines the responsibilities of the Environmental Protection Agency (EPA) in ensuring that drinking water standards are met, particularly in relation to pesticide use and its impact on water quality. The page emphasizes the importance of these regulations in protecting public health and the environment, although specific details and guidelines are not provided in the content presented. For comprehensive information, users are encouraged to visit the full EPA website.
+The U.S. Environmental Protection Agency (EPA) outlines the importance of adhering to common data standards as mandated by the National Technology Transfer and Advancement Act of 1995. This act encourages federal agencies to utilize voluntary consensus standards rather than creating unique ones, unless prohibited by law or impractical. The EPA provides various resources for understanding these external standards, which contractors are required to follow. The document emphasizes the significance of standardization in enhancing data consistency and interoperability across federal, national, and international platforms.
 
 ## 内容
-[Skip to main content](https://www.epa.gov/ground-water-and-drinking-water/understanding-drinking-water-requirements-under-fifra-and-sdwa#main)
+The [National Technology Transfer and Advancement Act of 1995](https://www.epa.gov/laws-regulations/summary-national-technology-transfer-and-advancement-act) directs agencies to use common standards (voluntary consensus standards) instead of unique standards except when illegal or otherwise impractical.
 
-![Dot gov](https://www.epa.gov/themes/epa_theme/images/icon-dot-gov.svg)
+Many resources are available for learning about standards developed outside to EPA. Contractors are required to follow these standards. Below is a list of some available resources.
 
-**Official websites use .gov**
+## Federal Standards:
 
-A **.gov** website belongs to an official government organization in the United States.
+[The Federal Geographic Data Committee (FGDC)](http://www.fgdc.gov/standards)
 
-![HTTPS](https://www.epa.gov/themes/epa_theme/images/icon-https.svg)
-
-**Secure .gov websites use HTTPS**
-
-A **lock** (LockA locked padlock) or **https://** means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
-
-Ground Water and Drinking Water
-
-[Contact Us](https://www.epa.gov/ground-water-and-drinking-water/forms/contact-us-about-ground-water-and-drinking-water)
-
-# Understanding drinking water requirements under FIFRA and SDWA
-
-### Background
-
-The [Federal Insecticide, Fungicide, and Rodent
+FGDC is an interagency committee that promotes the coordinated development, use, sharing, and dissemination of geospatial dataData that identify, depict, or describe the geographic locations, boundaries, or characteristics of the Earth's inhabitants or its natural or human-constructed features. Geospatial data include geographic coordinates (e.g., latitude and longitude) that identify a specific location on the Earth; data that are linked to geographic locations or have a
 
 
 

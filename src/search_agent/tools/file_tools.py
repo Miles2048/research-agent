@@ -259,13 +259,10 @@ def save_source_data(sources: List[Dict[str, Any]], output_dir: str = "result/so
                 filename = f"{safe_title}.md"
                 file_path = os.path.join(output_dir, filename)
                 
-                # 如果文件已存在，添加序号避免覆盖
-                counter = 1
-                original_path = file_path
-                while os.path.exists(file_path):
-                    name_without_ext = os.path.splitext(original_path)[0]
-                    file_path = f"{name_without_ext}_{counter}.md"
-                    counter += 1
+                # 如果文件已存在，直接跳过
+                if os.path.exists(file_path):
+                    logger.debug(f"文件已存在，跳过: {filename}")
+                    continue
                 
                 # 安全地获取摘要字段
                 summary = source.get('summary', '')
