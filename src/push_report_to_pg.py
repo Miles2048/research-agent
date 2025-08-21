@@ -179,11 +179,12 @@ class ReportPusher:
         reading_time = max(1, word_count // 200)  # 至少1分钟
         
         # 准备数据
+        # 'name': report_name[:255],
         report_data = {
             'company_id': company_id,
             'artifact_id': artifact_id,
             'created_by': created_by,
-            'name': report_name[:255],  # 确保不超过255字符
+            'name': '深度研究报告',  
             'file_type': 1,  # MD文档
             'file_path': 'NA',
             'file_size': file_size,

@@ -9,12 +9,19 @@ from database_format.config import config
 from database_format.models import Reference, EvaluationResult, BatchResult
 from database_format.llm_evaluator import LLMEvaluator
 from database_format.update_publishers import PublisherExtractor
+from database_format.concurrent_evaluator import ConcurrentEvaluator
 
 class DatabaseUpdater:
     """Handle database operations for reference updates."""
     
-    def __init__(self):
-        """Initialize database updater."""
+    def __init__(self, use_concurrent: bool = False, max_workers: int = 5):
+        """
+        Initialize database updater.
+        
+        Args:
+            use_concurrent: Whether to use concurrent evaluation
+            max_workers: Number of concurrent workers (if concurrent mode enabled)
+        """
         self.config = config
         self.db_path = self.config.DATABASE_CONFIG['db_path']
         self.table_name = self.config.DATABASE_CONFIG['table_name']
@@ -22,7 +29,20 @@ class DatabaseUpdater:
         self.evaluator = LLMEvaluator()
         self.publisher_extractor = PublisherExtractor()
         
-        logger.info(f"DatabaseUpdater initialized with database: {self.db_path}")
+        # Initialize concurrent evaluator if needed
+        self.use_concurrent = use_concurrent
+        self.concurrent_evaluator = None
+        if use_concurrent:
+            self.concurrent_evaluator = ConcurrentEvaluator(
+                max_workers=max_workers,
+                rate_limit=0.2,  # Configurable
+                batch_update_size=20
+            )
+            logger.info(f"DatabaseUpdater initialized with concurrent mode ({max_workers} workers)")
+        else:
+            logger.info(f"DatabaseUpdater initialized with serial mode")
+        
+        logger.info(f"Database: {self.db_path}")
     
     def get_references_to_update(self, limit: Optional[int] = None) -> List[Reference]:
         """Get references that need evaluation."""
@@ -100,6 +120,66 @@ class DatabaseUpdater:
             logger.error(f"Error updating reference {ref_id}: {str(e)}")
             
         return False
+    
+    def batch_update_references(self, evaluation_results: Dict[int, EvaluationResult]) -> Dict[str, int]:
+        """
+        Batch update multiple references with evaluation results.
+        
+        Args:
+            evaluation_results: Dictionary mapping reference ID to evaluation result
+            
+        Returns:
+            Dictionary with 'success' and 'failed' counts
+        """
+        if not evaluation_results:
+            logger.warning("No evaluation results to update")
+            return {'success': 0, 'failed': 0}
+        
+        # Prepare batch update data
+        update_data = [
+            (
+                result.reference_type,
+                result.credibility,
+                result.related_assessment,
+                datetime.now().isoformat(),
+                ref_id
+            )
+            for ref_id, result in evaluation_results.items()
+        ]
+        
+        query = f"""
+        UPDATE "{self.table_name}"
+        SET reference_type = ?,
+            credibility = ?,
+            related_assessment = ?,
+            updated_at = ?
+        WHERE id = ?
+        """
+        
+        success_count = 0
+        failed_count = 0
+        
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                
+                # Use executemany for batch update
+                cursor.executemany(query, update_data)
+                conn.commit()
+                
+                success_count = cursor.rowcount
+                failed_count = len(update_data) - success_count
+                
+                logger.info(f"Batch update completed: {success_count} successful, {failed_count} failed")
+                
+        except Exception as e:
+            logger.error(f"Batch update failed: {str(e)}")
+            failed_count = len(update_data)
+        
+        return {
+            'success': success_count,
+            'failed': failed_count
+        }
     
     def process_batch(self, references: Optional[List[Reference]] = None) -> BatchResult:
         """Process a batch of references."""

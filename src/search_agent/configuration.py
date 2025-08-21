@@ -33,7 +33,7 @@ class Configuration(BaseModel):
         default=2,
         metadata={"description": "The number of initial search queries to generate."},
     )
-
+# 最大搜索轮数
     max_research_loops: int = Field(
         default=2,
         metadata={"description": "The maximum number of research loops to perform."},
