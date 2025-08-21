@@ -24,7 +24,7 @@ class Config:
             'batch_size': 10,
             'max_retries': 3,
             'retry_delay': 2,
-            'table_name': 'references'
+            'table_name': 'research_results_local'  # 修正为实际的表名
         }
         
         # LLM configuration
@@ -40,12 +40,12 @@ class Config:
         
         # Reference types
         self.REFERENCE_TYPES = [
-            "用户输入",
-            "行业研究报告", 
-            "同行评审的学术出版物",
-            "竞对公司网站和产品页面",
-            "政策与准入数据",
-            "社交媒体和公共论坛"
+            "uncategorized",
+            "official_statistics",
+            "business_data",
+            "character_varying",
+            "real-time_data",
+            "academic_research"
         ]
         
         # Load configurations

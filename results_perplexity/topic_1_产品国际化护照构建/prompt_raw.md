@@ -1,7 +1,7 @@
 ---
 title: Raw Prompt for Perplexity Report Generation
 topic_id: topic_1
-generated_at: 2025-08-21 18:56:29
+generated_at: 2025-08-21 22:28:36
 model: sonar-pro
 api_used: Perplexity Sonar API
 ---
@@ -110,176 +110,206 @@ api_used: Perplexity Sonar API
 
 ## 研究数据源：你需要使用这个数据源
 
-### 数据源 1: NSF_ANSI 61_600 Updated for PFAS Regulations.md
-# NSF/ANSI 61/600 Updated for PFAS Regulations
+### 数据源 1: AWG 800 - AWG Contracting US.md
+# AWG 800 - AWG Contracting US
 
 ## 基本信息
-- **标题**: NSF/ANSI 61/600 Updated for PFAS Regulations
-- **URL**: https://www.asdwa.org/2025/03/05/nsf-ansi-61-600-updated-for-pfas-regulations/
-- **创建时间**: 2025-08-21 18:54:29
-- **更新时间**: 2025-08-21 18:54:29
+- **标题**: AWG 800 - AWG Contracting US
+- **URL**: https://awgcontractingus.com/product/awg-800/
+- **创建时间**: 2025-08-21 22:25:34
+- **更新时间**: 2025-08-21 22:25:34
 
 ## 评估信息
-- **可信度**: 待评估
-- **相关性**: 待评估
+- **资源类型**: character_varying
+- **可信度**: 3
+- **相关性**: 85%
 
 ## AI摘要
-The NSF has revised the NSF/ANSI/CAN 61-2024 and NSF/ANSI/CAN 600-2024 standards to comply with the EPA's PFAS National Primary Drinking Water Regulations. These updates mandate that drinking water components be third-party certified under NSF-61 to ensure safety against chemical contaminants, including per- and polyfluoroalkyl substances (PFAS). The 2024 NSF 61 standard introduces an expanded testing protocol that includes seven PFAS compounds, enhancing the regulation of materials used in drinking water systems to protect public health.
+The AWG800 is a state-of-the-art atmospheric water generator capable of producing up to 800 liters (211 gallons) of clean water daily while maintaining low power consumption. It meets or exceeds the water quality standards set by the World Health Organization (WHO) and the Environmental Protection Agency (EPA). The unit's dimensions are 1442 × 1245 × 1295 mm (approximately 4 ft 9 in L x 4 ft 1 in W). For further technical details, a brochure is available for download.
 
 ## 内容
 
- NSF has updated the NSF/ANSI/CAN 61-2024 (NSF-61) and NSF/ANSI/CAN 600-2024 (NSF-600) standards to align with the final EPA PFAS National Primary Drinking Water Regulations. Federal and state regulations and plumbing codes require drinking water components to be third-party certified to the NSF-61standard for chemical contaminants and impurities from products, components and materials used in drinking water. 
- The 2024 version of NSF 61 now includes an expanded test battery of seven PFAS compounds including the six that are regulated by the EPA. The standard also includes a January 1, 2028, deadline to comply with the new testing requirements. For products tested and found to comply with the updated PFAS criteria, NSF offers an optional ‘+PFASʼ tested mark to demonstrate compliance. NSF 600 contains the pass/fail criteria for products evaluated to NSF 61 and has also been updated so the Total Allowable Concentration (TAC) aligns with the six regulated PFAS compounds. For more information, visit the NSF website. 
+ Description 
+ UNLIMITED CLEAN WATER 
+The AWG800 is the most advanced atmospheric water generator with low power consumption. Engineered to produce up to 800 liters / 211 gallons of clean water a day. 
+ The AWG800 water quality meets and exceeds World 
+Health Organization (WHO) and Environmental 
+Protection Agency (EPA) standards. 
+ Download the “Technical Brochure” AWG800 Gen-3 Spec Sheet 
+ 
+ Additional information 
+ 
+ 
+ Dimensions 
+ 1442 × 1245 × 1295 mm 
+ 
+ 
+ Size 
+ 4 ft 9 in L x 4 ft 1 in W x 4 ft 3 in H 
+ 
+ 
+ 
+ 
+ AWG800 Unit Features Include: 
+ » Daily water capacity production: 800 liters a day 
+(can produce more in certain environmental conditions) 
+ » kWh: 0.60 kWh/gallon (0.18 kWh/l) 
+ » Wide range of operating conditions: 
+5oC-55oC; 20%-99% RH 
+ » Electric; 400/460 V, 3-phase, 50-60 Hz 
+ » Components NSF 61 certified. 
+ » Power Supply: Electrical Grid and/or Generator 
+ » Power control enclosure is NEMA type 4X 
+ » Efficient one-person setup. 
+ » Easy transport and handling. 
+ » Automated controls. 
+ » O-Zone Treatment system and complete water filtration. 
+ » Remote Operation 
+ » Internal pumping. 
+ » Electric and electronic box refrigerated. 
+ » For extreme conditions and heavy-duty use; 
+Specific to Military Us
 
-
-
-
-### 数据源 2: NSF_ANSI_CAN 61 certification_ drinking water components testing.md
-# NSF/ANSI/CAN 61 certification: drinking water components testing
-
-## 基本信息
-- **标题**: NSF/ANSI/CAN 61 certification: drinking water components testing
-- **URL**: https://www.kiwa.com/en/service2/inspection/kiwa-nsf-ansi-can-61-product-certificate-for-drinking-water-system-components/
-- **创建时间**: 2025-08-21 18:54:29
-- **更新时间**: 2025-08-21 18:54:29
-
-## 评估信息
-- **可信度**: 待评估
-- **相关性**: 待评估
-
-## AI摘要
-The NSF/ANSI/CAN 61 certification is essential for components of drinking water distribution systems in the U.S. and Canada, as it establishes minimum health effect criteria for materials and products that contact drinking water. Compliance with this standard is mandated by nearly all states and provinces, ensuring that the safety and health impacts of these components are rigorously evaluated.
-
-## 内容
-# Kiwa NSF/ANSI/CAN 61 product certificate for drinking water system components – Health effects
-
-Nearly all U.S. states and Canadian provinces/territories require that components of drinking water distribution systems comply with and/or be certified to the NSF/ANSI/CAN 61 standard. This standard sets minimum criteria for evaluating the health effects of materials, components, products and systems that come into contact with drinking water.
-
-## Receive a quote tailored to your needs
-
-[+31 (0)88 998 45 55](tel:+310889984555) [Contact us](https://www.kiwa.com/en/contact/request-contact/?for=1d3f397d-5581-4658-8852-ddc6223c8bb9) [Get a quote](https://www.kiwa.com/en/contact/request-quotation/?for=1d3f397d-5581-4658-8852-ddc6223c8bb9)
-
-### For whom is NSF/ANSI/CAN 61 certification?
-
-NSF/ANSI/CAN 61 is intended for manufacturers who want to demonstrate that their product meets minimum criteria for health effects and is accepted in North America and Canada.
-
-Products that fall under this standard include:
-
-- Protective barrier materials (cements, paints, coatings);
-- Bonding and sealing materials (gaskets, adhesives, lubricants);
-- Mechanical equipment, including treatment products (wa
-
-### 数据源 3: Using Standards to Improve Water Quality _ US EPA.md
-# Using Standards to Improve Water Quality | US EPA
-
-## 基本信息
-- **标题**: Using Standards to Improve Water Quality | US EPA
-- **URL**: https://www.epa.gov/vcs/using-standards-improve-water-quality
-- **创建时间**: 2025-08-21 18:54:29
-- **更新时间**: 2025-08-21 18:54:29
-
-## 评估信息
-- **可信度**: 待评估
-- **相关性**: 待评估
-
-## AI摘要
-The US EPA's resource on "Using Standards to Improve Water Quality" outlines the importance of implementing standards to enhance water quality across various ecosystems. It emphasizes the role of regulatory frameworks and guidelines in monitoring and managing water resources effectively. The document likely discusses specific standards, methodologies for assessment, and the impact of these practices on public health and environmental sustainability. For detailed insights, users are encouraged to explore the full content on the EPA's official website.
-
-## 内容
-[Skip to main content](https://www.epa.gov/vcs/using-standards-improve-water-quality#main)
-
-![Dot gov](https://www.epa.gov/themes/epa_theme/images/icon-dot-gov.svg)
-
-**Official websites use .gov**
-
-A **.gov** website belongs to an official government organization in the United States.
-
-![HTTPS](https://www.epa.gov/themes/epa_theme/images/icon-https.svg)
-
-**Secure .gov websites use HTTPS**
-
-A **lock** (LockA locked padlock) or **https://** means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
-
-Voluntary Consensus Standards
-
-[Contact Us](https://www.epa.gov/vcs/forms/contact-us-about-voluntary-consensus-standards)
-
-# Using Standards to Improve Water Quality
-
-![](https://www.epa.gov/sites/default/files/styles/medium/public/2013-06/rd448-drinkingwater.jpg?itok=gNhy4vNX)
-
-## 2020 Status Update
-
-### Using Standards to Improve Drinking Water Components
-
-NSF/ANSI/CAN 61: Drinking Water System Components
-
-EPA’s Office of Research and Development (ORD) participates in the NSF International committees responsible for developing NSF/ANSI/CAN 61. In FY 2020, the Offi
-
-### 数据源 4: Water Systems Certification _ IAPMO R&T.md
-# Water Systems Certification | IAPMO R&T
+### 数据源 2: Atmospheric Water Generation Technology.md
+# Atmospheric Water Generation Technology
 
 ## 基本信息
-- **标题**: Water Systems Certification | IAPMO R&T
-- **URL**: https://iapmort.org/certification-services/water-systems-certification
-- **创建时间**: 2025-08-21 18:54:29
-- **更新时间**: 2025-08-21 18:54:29
+- **标题**: Atmospheric Water Generation Technology
+- **URL**: https://www.epa.gov/sites/default/files/2019-11/documents/awg_technical_brief_final_05nov19.pdf
+- **创建时间**: 2025-08-21 22:25:34
+- **更新时间**: 2025-08-21 22:25:34
 
 ## 评估信息
-- **可信度**: 待评估
-- **相关性**: 待评估
+- **资源类型**: official_statistics
+- **可信度**: 5
+- **相关性**: 85%
 
 ## AI摘要
-The IAPMO Water Systems Certification Program aims to assure regulators, inspectors, manufacturers, distributors, installers, engineers, and the public of the reliability and safety of water system products. Through rigorous testing and certification, the program enhances confidence in the quality and compliance of these products, ensuring they meet established standards. For further information, resources are available through the IAPMO homepage and related links.
+The document from the U.S. Environmental Protection Agency evaluates Atmospheric Water Generation (AWG) technology, which produces potable water from ambient air. This technology offers a promising solution to enhance water availability during shortages, contamination incidents, and other disruptions to drinking water services. The report highlights the feasibility of AWGs as a means to address water scarcity and improve access to safe drinking water.
 
 ## 内容
-[Jump to content](https://iapmort.org/iapmort.org#content)
+1 U.S. Environmental Protection Agency │ Office of Research and Development EPA/600/F-19/129│ November 2019
+Atmospheric Water Generation Technology
+Evaluating the feasibility of technologies that produce potable water from the air
+Producing Water from Air
+Atmospheric water generators (AWGs) produce 
+potable water from surrounding air. This provides the
+potential to expand water availability during shortages, 
+contamination events, and other issues that can 
+interrupt drinking water services. Natural disasters, 
+such as hurricanes, and public water infrastructure 
+failures, such as pipe corrosion resulting in 
+contamination issues, have increased the interest in 
+AWG technology as both emergency and long-term 
+supply solutions. 
+These generators range from home-based units that 
+can produce 1 to 20 liters of water per day to 
+commercial-scale units capable of 1,000 to over 10,000 
+liters per day. Water production rates are highly 
+dependent upon the air temperature and the amount 
+of water vapor (i.e., humidity) in the air. The most 
+commonly used AWG systems employ condenser and 
+cooling coil technology to pull moisture from the air in 
+the same way a household dehumid
 
-- (909) 472-4100
-
-- [IAPMO Homepage](https://iapmo.org/)
-- [IAPMO Bookstore](https://iapmostore.org/)
-- [IWSH Foundation](https://iwsh.org/)
-- [Contact Us](https://iapmort.org/contact-rt)
-
-WATER SYSTEMS CERTIFICATION
-
-IAPMO’s Water Systems Certification Program informs and provides the utmost confidence to regulators, inspectors, manufacturers, distributors, installers, engineers and the public that the products have been tested and certified to the applicable standards.
-
-Our experienced technical experts will help guide you through the certification process to get your products to market quickly.
-
-With IAPMO R&T, manufacturers gain an attentive, service-oriented partner for exhibiting the compliance of their products to the United States and Global markets.
-
-The IAPMO R&T brand and its reputation for quality are unparalleled in the industry. IAPMO marks of conformity are widely recognized and represent the highest degree of integrity in showing compliance with established codes and standards.
-
-## MARKS OF CONFORMITY
-
-IAPMO RT Marks of Conformity are widely recognized and represent the highest degree of integrity showing compliance with established c
-
-### 数据源 5: Water.md
-# Water
+### 数据源 3: Federal, National, and International Data Standards _ US EPA.md
+# Federal, National, and International Data Standards | US EPA
 
 ## 基本信息
-- **标题**: Water
-- **URL**: https://www.nsf.org/water-systems
-- **创建时间**: 2025-08-21 18:54:29
-- **更新时间**: 2025-08-21 18:54:29
+- **标题**: Federal, National, and International Data Standards | US EPA
+- **URL**: https://www.epa.gov/data/federal-national-and-international-data-standards
+- **创建时间**: 2025-08-21 22:25:34
+- **更新时间**: 2025-08-21 22:25:34
 
 ## 评估信息
-- **可信度**: 待评估
-- **相关性**: 待评估
+- **资源类型**: character_varying
+- **可信度**: 5
+- **相关性**: 75%
 
 ## AI摘要
-The article emphasizes the importance of testing, inspection, and certification for manufacturers of plumbing products, including faucets, drinking water fountains, and fixtures. It highlights that compliance with industry standards is essential for market entry, ensuring that products are safe and reliable. The expertise offered aims to assist manufacturers in achieving these compliance requirements.
+The US EPA outlines the importance of adhering to common data standards as mandated by the National Technology Transfer and Advancement Act of 1995. This act encourages federal agencies to utilize voluntary consensus standards rather than creating unique standards, except in cases where it is illegal or impractical. The EPA provides various resources for understanding these external standards, which contractors are required to follow. The document emphasizes the significance of standardization in enhancing data consistency and interoperability across federal, national, and international platforms.
 
 ## 内容
-##### Plumbing Fixtures and Fittings Testing and Certification
+The [National Technology Transfer and Advancement Act of 1995](https://www.epa.gov/laws-regulations/summary-national-technology-transfer-and-advancement-act) directs agencies to use common standards (voluntary consensus standards) instead of unique standards except when illegal or otherwise impractical.
 
-Article
+Many resources are available for learning about standards developed outside to EPA. Contractors are required to follow these standards. Below is a list of some available resources.
 
-Are you a manufacturer seeking compliance for your plumbing products? Proper testing, inspection, and certification are crucial for market entry, whether manufacturing faucets and taps, drinking water fountains, or fixtures and fittings. With our expertise, we help manufacturers meet standards and ensure their products are safer and more reliable.
+## Federal Standards:
 
+[The Federal Geographic Data Committee (FGDC)](http://www.fgdc.gov/standards)
 
+FGDC is an interagency committee that promotes the coordinated development, use, sharing, and dissemination of geospatial dataData that identify, depict, or describe the geographic locations, boundaries, or characteristics of the Earth's inhabitants or its natural or human-constructed features. Geospatial data include geographic coordinates (e.g., latitude and longitude) that identify a specific location on the Earth; data th
+
+### 数据源 4: Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx.md
+# Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx
+
+## 基本信息
+- **标题**: Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx
+- **URL**: https://www.who.int/docs/default-source/medical-devices/technical-specs-ppe-covid19.pdf
+- **创建时间**: 2025-08-21 22:25:34
+- **更新时间**: 2025-08-21 22:25:34
+
+## 评估信息
+- **资源类型**: character_varying
+- **可信度**: 5
+- **相关性**: 65%
+
+## AI摘要
+The document titled "COVID-19 Technical Specifications for Personal Protective Equipment and Related IPC Supplies" outlines the essential technical characteristics and minimum requirements for personal protective equipment (PPE) related to COVID-19. It emphasizes that the appropriate clinical use of these devices should be determined by infection prevention and control (IPC) guidelines and medical professionals. The publication serves as a resource for ensuring that PPE meets necessary standards to safeguard health workers and patients during the pandemic.
+
+## 内容
+WHO/2020-nCoV/MedDev/TS/InfDev 7 August 2020 
+ 
+COVID-19 Technical Specifications for Personal Protective Equipment 
+and Related IPC supplies 
+1 
+1. Considerations 
+The present publication aims to define the basic Technical characteristics of Personal protective 
+equipment. The decision as to the appropriate clinical use of each of these devices is reserved to the IPC 
+guidance and medical staff. 
+2. Methodology
+Technical specifications define the minimum requirements for the product to ensure good quality, safety 
+and efficacy. The process to develop these specifications included: 
+1. Analysis of the required to perform the clinical management of COVID-19 patients.1
+ 
+2. Considerations of Rational use of personal protective equipment 2
+3. Analysis of personal protective equipment and infection prevention control measures during 
+COVID-19 including use of masks3
+4. COVID-19 advice for the public: when and how to use masks4
+5. Analysis of existing products in the market, based on approvals from the regulatory agencies. 
+6. Analysis of in
+
+### 数据源 5: What are the International Regulations for Electrical .md
+# What are the International Regulations for Electrical ...
+
+## 基本信息
+- **标题**: What are the International Regulations for Electrical ...
+- **URL**: https://blog.clevercompliance.io/electrical-product-compliance/international-regulations-for-electrical-products/
+- **创建时间**: 2025-08-21 22:25:34
+- **更新时间**: 2025-08-21 22:25:34
+
+## 评估信息
+- **资源类型**: character_varying
+- **可信度**: 4
+- **相关性**: 85%
+
+## AI摘要
+The web resource titled "What are the International Regulations for Electrical Products?" appears to focus on the compliance standards and regulations governing electrical products on a global scale. It likely discusses the importance of adhering to these regulations to ensure safety, enhance productivity, and mitigate risks associated with electrical products. The content may also highlight the role of AI-powered compliance management tools in streamlining the compliance process. However, the provided content is insufficient to extract detailed information or specific regulations.
+
+## 内容
+[Skip to Content](https://blog.clevercompliance.io/blog.clevercompliance.io#content)
+
+Discover AI Powered Product Compliance Management. Save time, enhance productivity and mitigate risks. [Find out more](https://clevercompliance.io)
+
+[Home](https://blog.clevercompliance.io)[Electrical product compliance](https://blog.clevercompliance.io/category/electrical-product-compliance/)[What are the International Regulations for Electrical Products?](https://blog.clevercompliance.io/electrical-product-compliance/international-regulations-for-electrical-products/)
+
+Share
+
+4
+
+_This article presents the international regulations for electrical products and what manufacturers need to do to ensure market access._
+
+Placing an electrical product on an international market represents a very challenging task for any manufacturer. They need to seek and understand the imposed conditions for entering the intended market. These conditions often differ from market to market, from country to country, and even f
 
 
 

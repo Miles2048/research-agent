@@ -7,8 +7,8 @@ from pathlib import Path
 from loguru import logger
 from dotenv import load_dotenv
 
-from .database_updater import DatabaseUpdater
-from .config import config
+from database_format.database_updater import DatabaseUpdater
+from database_format.config import config
 
 def setup_logging(verbose: bool = False):
     """Set up logging configuration."""

@@ -23,6 +23,7 @@ dependencies = [
     "exa-py>=1.0.0", # 添加 Exa API 客户端
     "langsmith>=0.1.0", # LangSmith 监控和调试
     "psycopg2-binary>=2.9.10",
+    "anthropic>=0.64.0",
 ]
 
 

@@ -28,25 +28,23 @@ class Reference:
         # credibility_assessment, related_assessment_text
         return cls(
             id=row[0],
-            reference_type=row[1] or '未分类',
+            reference_type=row[1] or 'uncategorized',
             reference_url=row[2] or '',
             reference_title=row[3] or '',
             reference_content=row[4],
             publisher=row[5],
             credibility=row[6] or 2,
-            related_assessment=row[7] or 0.80,
-            credibility_assessment=row[8],
-            related_assessment_text=row[9]
+            related_assessment=row[7] or 80,
+            credibility_assessment=None,  # 数据库中不存储
+            related_assessment_text=None  # 数据库中不存储
         )
     
     def needs_evaluation(self) -> bool:
         """Check if reference needs evaluation."""
         return (
-            self.reference_type == '未分类' or
+            self.reference_type == 'uncategorized' or
             self.credibility == 2 or  # Default value
-            self.related_assessment == 0.80 or  # Default value
-            not self.credibility_assessment or
-            not self.related_assessment_text
+            self.related_assessment == 80  # Default value
         )
 
 @dataclass
@@ -73,13 +71,12 @@ class EvaluationResult:
         """Validate evaluation result."""
         return (
             self.reference_type in [
-                "用户输入", "行业研究报告", "同行评审的学术出版物",
-                "竞对公司网站和产品页面", "政策与准入数据", "社交媒体和公共论坛"
+                "uncategorized", "official_statistics", "business_data",
+                "real-time_data", "academic_research"
             ] and
-            1 <= self.credibility <= 3 and
-            0.0 <= self.related_assessment <= 1.0 and
-            len(self.credibility_assessment) > 0 and
-            len(self.related_assessment_text) > 0
+            1 <= self.credibility <= 5 and
+            0 <= self.related_assessment <= 100
+            # 不再检查文字评估字段，因为数据库不存储它们
         )
 
 @dataclass

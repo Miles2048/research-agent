@@ -21,7 +21,7 @@
 
 ## 具体搜索指导
 重点搜索：1) 国际AWG产品技术标准和认证要求（WHO饮用水标准、EPA认证、CE标志要求）；2) 主要竞争对手（Watergen、Zero Mass Water、Aquatech等）的产品规格和市场定位；3) AWG行业专业术语的标准英文表达；4) 各国对AWG产品的进口要求和技术壁垒。
-- **时间**: 2025-08-21 19:11:00
+- **时间**: 2025-08-21 22:25:34
 
 ## 文件结构
 
@@ -29,11 +29,11 @@
 - [研究报告](topic_1_report.md)
 
 ### 数据源 (5 个)
-- [数据源: Applications & Evolution of Atmospheric Water Generation ](source_data/Applications & Evolution of Atmospheric Water Generation .md)
-- [数据源: Drinking Water Atmospheric Water Generators (AWG)](source_data/Drinking Water Atmospheric Water Generators (AWG).md)
-- [数据源: [PDF] Atmospheric Water Generation Technology](source_data/[PDF] Atmospheric Water Generation Technology.md)
-- [数据源: New Guidance for Atmospheric Water Generators ](source_data/New Guidance for Atmospheric Water Generators .md)
-- [数据源: Atmospheric Water Generation Research](source_data/Atmospheric Water Generation Research.md)
+- [数据源: AWG 800 - AWG Contracting US](source_data/AWG 800 - AWG Contracting US.md)
+- [数据源: Atmospheric Water Generation Technology](source_data/Atmospheric Water Generation Technology.md)
+- [数据源: Microsoft Word - Technical Specs PPE Covid19 final V6.docx](source_data/Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx.md)
+- [数据源: What are the International Regulations for Electrical ](source_data/What are the International Regulations for Electrical .md)
+- [数据源: Federal, National, and International Data Standards   US EPA](source_data/Federal, National, and International Data Standards _ US EPA.md)
 
 ## 目录结构
 ```
@@ -41,9 +41,9 @@ result/
 ├── research_summary.md     # 本文件
 ├── topic_1_report.md           # 主研究报告
 └── source_data/            # 数据源目录
-    ├── Applications & Evolution of Atmospheric Water Generation .md
-    ├── Drinking Water Atmospheric Water Generators (AWG).md
-    ├── [PDF] Atmospheric Water Generation Technology.md
-    ├── New Guidance for Atmospheric Water Generators .md
-    ├── Atmospheric Water Generation Research.md
+    ├── AWG 800 - AWG Contracting US.md
+    ├── Atmospheric Water Generation Technology.md
+    ├── Microsoft Word - Technical_Specs_PPE_Covid19_final_V6.docx.md
+    ├── What are the International Regulations for Electrical .md
+    ├── Federal, National, and International Data Standards _ US EPA.md
 ```

@@ -19,10 +19,10 @@ sys.path.insert(0, str(current_dir.parent))
 sys.path.insert(0, str(current_dir.parent.parent))
 
 try:
-    from .config import get_database_path
-    from .models import Reference
-    from .database_updater import DatabaseUpdater
-    from .llm_evaluator import LLMEvaluator
+    from database_format.config import get_database_path
+    from database_format.models import Reference
+    from database_format.database_updater import DatabaseUpdater
+    from database_format.llm_evaluator import LLMEvaluator
 except ImportError:
     from config import get_database_path
     from models import Reference

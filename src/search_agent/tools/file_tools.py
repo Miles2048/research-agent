@@ -268,6 +268,7 @@ def save_source_data(sources: List[Dict[str, Any]], output_dir: str = "result/so
                 summary = source.get('summary', '')
                 credibility = source.get('credibility', '待评估')
                 related_assessment = source.get('related_assessment', '待评估')
+                reference_type = source.get('reference_type', '未分类')
                 
                 # 格式化评分显示
                 credibility_display = credibility if isinstance(credibility, (int, float)) else credibility
@@ -283,6 +284,7 @@ def save_source_data(sources: List[Dict[str, Any]], output_dir: str = "result/so
 - **更新时间**: {current_time}
 
 ## 评估信息
+- **资源类型**: {reference_type}
 - **可信度**: {credibility_display}
 - **相关性**: {related_display}
 

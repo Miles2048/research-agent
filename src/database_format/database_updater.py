@@ -5,10 +5,10 @@ from typing import List, Dict, Optional
 from datetime import datetime
 from loguru import logger
 
-from .config import config
-from .models import Reference, EvaluationResult, BatchResult
-from .llm_evaluator import LLMEvaluator
-from .update_publishers import PublisherExtractor
+from database_format.config import config
+from database_format.models import Reference, EvaluationResult, BatchResult
+from database_format.llm_evaluator import LLMEvaluator
+from database_format.update_publishers import PublisherExtractor
 
 class DatabaseUpdater:
     """Handle database operations for reference updates."""
@@ -30,15 +30,14 @@ class DatabaseUpdater:
             limit = self.batch_size
             
         query = f"""
-        SELECT id, reference_type, reference_url, reference_title, 
-               reference_content, publisher, credibility, related_assessment,
-               credibility_assessment, related_assessment_text
+        SELECT id, reference_type, url as reference_url, name as reference_title, 
+               raw_content as reference_content, publisher, credibility, related_assessment
         FROM "{self.table_name}"
-        WHERE reference_type = '未分类'
+        WHERE reference_type = 'uncategorized'
            OR credibility = 2
-           OR related_assessment = 0.80
-           OR credibility_assessment IS NULL
-           OR related_assessment_text IS NULL
+           OR related_assessment = 80
+           OR credibility <= 2  -- 也评估低分记录
+           OR related_assessment <= 50  -- 也评估低相关性记录
         LIMIT ?
         """
         
@@ -74,10 +73,8 @@ class DatabaseUpdater:
         UPDATE "{self.table_name}"
         SET reference_type = ?,
             credibility = ?,
-            credibility_assessment = ?,
             related_assessment = ?,
-            related_assessment_text = ?,
-            reference_update_time = ?
+            updated_at = ?
         WHERE id = ?
         """
         
@@ -87,9 +84,7 @@ class DatabaseUpdater:
                 cursor.execute(query, (
                     evaluation.reference_type,
                     evaluation.credibility,
-                    evaluation.credibility_assessment,
                     evaluation.related_assessment,
-                    evaluation.related_assessment_text,
                     datetime.now().isoformat(),
                     ref_id
                 ))

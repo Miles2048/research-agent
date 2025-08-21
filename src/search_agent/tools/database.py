@@ -1338,7 +1338,7 @@ class DatabaseManager:
                 cursor = conn.cursor()
                 
                 query = '''
-                    SELECT credibility, related_assessment
+                    SELECT credibility, related_assessment, reference_type
                     FROM research_results_local 
                     WHERE url = ?
                     LIMIT 1
@@ -1351,7 +1351,8 @@ class DatabaseManager:
                 if row:
                     result = {
                         'credibility': row[0],
-                        'related_assessment': row[1]
+                        'related_assessment': row[1],
+                        'reference_type': row[2] if len(row) > 2 else '未分类'
                     }
                     db_logger.info(f"✅ [DB查询] 找到数据: {result}")
                     return result

@@ -6,9 +6,9 @@ from typing import Dict, Any, Optional, Tuple
 from anthropic import Anthropic
 from loguru import logger
 
-from .config import config
-from .models import Reference, EvaluationResult
-from .prompts import PromptTemplates
+from database_format.config import config
+from database_format.models import Reference, EvaluationResult
+from database_format.prompts import PromptTemplates
 
 class LLMEvaluator:
     """LLM evaluator using Claude for reference evaluation."""
@@ -107,7 +107,14 @@ class LLMEvaluator:
             response = self._call_llm(prompt)
             
             if response:
+                # 临时日志：查看原始响应
+                logger.info(f"[TEMP DEBUG] Raw LLM response (first 500 chars): {response[:500]}")
+                
                 result = self._parse_json_response(response)
+                
+                # 临时日志：查看解析后的JSON
+                logger.info(f"[TEMP DEBUG] Parsed JSON result: {result}")
+                
                 if result and all(key in result for key in ['credibility', 'credibility_assessment', 
                                                               'related_assessment', 'related_assessment_text']):
                     return EvaluationResult(
@@ -117,6 +124,12 @@ class LLMEvaluator:
                         related_assessment=float(result['related_assessment']),
                         related_assessment_text=result['related_assessment_text']
                     )
+                else:
+                    # 临时日志：查看缺失的字段
+                    if result:
+                        logger.warning(f"[TEMP DEBUG] Missing fields. Expected: ['credibility', 'credibility_assessment', 'related_assessment', 'related_assessment_text'], Got: {list(result.keys())}")
+                    else:
+                        logger.warning(f"[TEMP DEBUG] Result is None or empty")
                     
         except Exception as e:
             logger.error(f"Error in comprehensive evaluation: {str(e)}")
@@ -159,11 +172,33 @@ class LLMEvaluator:
             
             if start_idx != -1 and end_idx > start_idx:
                 json_str = response[start_idx:end_idx]
-                return json.loads(json_str)
+                
+                # 首先尝试直接解析
+                try:
+                    return json.loads(json_str)
+                except json.JSONDecodeError:
+                    # 如果失败，尝试修复常见问题
+                    import re
+                    
+                    # 修复：仅替换字符串值内的换行符（在引号内的）
+                    # 使用正则表达式找到所有字符串值
+                    def fix_string_value(match):
+                        # 获取引号内的内容
+                        content = match.group(1)
+                        # 替换控制字符
+                        content = content.replace('\n', '\\n')
+                        content = content.replace('\r', '\\r')
+                        content = content.replace('\t', '\\t')
+                        return f'"{content}"'
+                    
+                    # 匹配JSON字符串值（简化版，处理大多数情况）
+                    json_str_fixed = re.sub(r'"([^"\\]*(?:\\.[^"\\]*)*)"', fix_string_value, json_str)
+                    
+                    return json.loads(json_str_fixed)
                 
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse JSON response: {e}")
-            logger.debug(f"Response content: {response}")
+            logger.debug(f"Response content (first 500 chars): {response[:500]}")
             
         return None
     
