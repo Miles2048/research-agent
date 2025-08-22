@@ -14,13 +14,13 @@ from database_format.concurrent_evaluator import ConcurrentEvaluator
 class DatabaseUpdater:
     """Handle database operations for reference updates."""
     
-    def __init__(self, use_concurrent: bool = False, max_workers: int = 5):
+    def __init__(self, use_concurrent: bool = True, max_workers: int = 5):
         """
         Initialize database updater.
         
         Args:
-            use_concurrent: Whether to use concurrent evaluation
-            max_workers: Number of concurrent workers (if concurrent mode enabled)
+            use_concurrent: Whether to use concurrent evaluation (default: True)
+            max_workers: Number of concurrent workers (default: 5)
         """
         self.config = config
         self.db_path = self.config.DATABASE_CONFIG['db_path']
@@ -195,20 +195,32 @@ class DatabaseUpdater:
             
         logger.info(f"Processing batch of {len(references)} references")
         
-        # Evaluate references
-        evaluation_results = self.evaluator.batch_evaluate(references)
-        
-        # Update database
-        for ref_id, evaluation in evaluation_results.items():
-            if self.update_reference(ref_id, evaluation):
-                result.add_success()
-            else:
-                result.add_failure(f"Failed to update reference {ref_id} in database")
-                
-        # Handle references that failed evaluation
-        for ref in references:
-            if ref.id not in evaluation_results:
-                result.add_failure(f"Failed to evaluate reference {ref.id}")
+        # Choose evaluation method based on mode
+        if self.use_concurrent and self.concurrent_evaluator:
+            # Use concurrent evaluation
+            evaluation_results = self.concurrent_evaluator.evaluate_batch_concurrent(references)
+            
+            # Use batch update for database
+            update_stats = self.batch_update_references(evaluation_results)
+            result.successful = update_stats['success']
+            result.failed = update_stats['failed']
+            result.total_processed = len(references)
+            
+        else:
+            # Use serial evaluation (original behavior)
+            evaluation_results = self.evaluator.batch_evaluate(references)
+            
+            # Update database one by one
+            for ref_id, evaluation in evaluation_results.items():
+                if self.update_reference(ref_id, evaluation):
+                    result.add_success()
+                else:
+                    result.add_failure(f"Failed to update reference {ref_id} in database")
+                    
+            # Handle references that failed evaluation
+            for ref in references:
+                if ref.id not in evaluation_results:
+                    result.add_failure(f"Failed to evaluate reference {ref.id}")
                 
         logger.info(result.summary())
         return result

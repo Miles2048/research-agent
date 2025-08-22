@@ -34,6 +34,10 @@ def main():
                        help='Enable verbose logging')
     parser.add_argument('--dry-run', action='store_true',
                        help='Show references that would be processed without updating')
+    parser.add_argument('--no-concurrent', action='store_true',
+                       help='Disable concurrent evaluation (use serial mode)')
+    parser.add_argument('--workers', type=int, default=5,
+                       help='Number of concurrent workers (default: 5)')
     
     args = parser.parse_args()
     
@@ -59,7 +63,13 @@ def main():
     
     # Initialize updater
     try:
-        updater = DatabaseUpdater()
+        # Determine if concurrent mode should be used (default is True)
+        use_concurrent = not args.no_concurrent
+        
+        updater = DatabaseUpdater(
+            use_concurrent=use_concurrent,
+            max_workers=args.workers
+        )
         
         # Update batch size if specified
         if args.batch_size:
